@@ -1,0 +1,21 @@
+{
+  "id": "accounting-3-statements",
+  "slug": "accounting-3-statements",
+  "title": "Accounting: 3 Statements",
+  "sourceDoc": "IBIG-04-02-Accounting-3-Statements copy.pdf",
+  "description": "Income statement, cash flow statement, and balance sheet — how they link and how to walk through them in interviews.",
+  "quizTopic": "accounting",
+  "order": 2,
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "body": "Replace this with content extracted from IBIG-04-02-Accounting-3-Statements copy.pdf. Use CONTENT_INTEGRATION.md for conversion steps.",
+      "keyPoints": [
+        "Income statement: revenue − expenses = net income",
+        "Cash flow: starts with net income, adjusts for non-cash and working capital",
+        "Balance sheet: assets = liabilities + equity"
+      ]
+    }
+  ]
+}

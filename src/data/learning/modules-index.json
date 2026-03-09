@@ -1,0 +1,60 @@
+{
+  "modules": [
+    {
+      "id": "core-concepts",
+      "slug": "core-concepts",
+      "title": "Core Concepts",
+      "sourceDoc": "IBIG-04-01-Core-Concepts copy.pdf",
+      "quizTopic": "core",
+      "order": 1
+    },
+    {
+      "id": "accounting-3-statements",
+      "slug": "accounting-3-statements",
+      "title": "Accounting: 3 Statements",
+      "sourceDoc": "IBIG-04-02-Accounting-3-Statements copy.pdf",
+      "quizTopic": "accounting",
+      "order": 2
+    },
+    {
+      "id": "advanced-accounting",
+      "slug": "advanced-accounting",
+      "title": "More Advanced Accounting",
+      "sourceDoc": "IBIG-04-03-More-Advanced-Accounting copy.pdf",
+      "quizTopic": "accounting",
+      "order": 3
+    },
+    {
+      "id": "equity-enterprise-value",
+      "slug": "equity-enterprise-value",
+      "title": "Equity Value, Enterprise Value, Metrics & Multiples",
+      "sourceDoc": "IBIG-04-04-Equity-Value-Enterprise-Value-Metrics-Multiples copy.pdf",
+      "quizTopic": "valuation",
+      "order": 4
+    },
+    {
+      "id": "dcf-valuation",
+      "slug": "dcf-valuation",
+      "title": "Valuation: DCF Analysis",
+      "sourceDoc": "IBIG-04-05-Valuation-DCF-Analysis copy.pdf",
+      "quizTopic": "valuation",
+      "order": 5
+    },
+    {
+      "id": "ma-merger-models",
+      "slug": "ma-merger-models",
+      "title": "M&A Deals & Merger Models",
+      "sourceDoc": "IBIG-04-06-MA-Deals-Merger-Models copy.pdf",
+      "quizTopic": "mergers",
+      "order": 6
+    },
+    {
+      "id": "lbo-models",
+      "slug": "lbo-models",
+      "title": "Leveraged Buyouts & LBO Models",
+      "sourceDoc": "IBIG-04-07-Leveraged-Buyouts-LBO-Models copy.pdf",
+      "quizTopic": "lbo",
+      "order": 7
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "id": "riley-first-coffee",
+  "title": "First coffee chat with Riley",
+  "npcId": "riley",
+  "startNodeId": "intro",
+  "nodes": {
+    "intro": {
+      "id": "intro",
+      "speaker": "npc",
+      "text": "A 'coffee chat' is just a short, informal conversation you have with someone in the industry — to learn about their job and get on their radar. No coffee required. I'll play the banker; you practice answering the kinds of questions we actually ask. No pressure — this one's on me.",
+      "next": "q1"
+    },
+    "q1": {
+      "id": "q1",
+      "speaker": "npc",
+      "text": "So — why are you interested in banking?",
+      "choices": [
+        {
+          "id": "q1_a",
+          "label": "I'm drawn to the deal flow and the chance to work on high-impact transactions.",
+          "nextNodeId": "q1_good",
+          "statDeltas": { "professionalism": 5, "storytelling": 3 },
+          "feedback": "Strong answer. Specific and professional — that's what we want to hear."
+        },
+        {
+          "id": "q1_b",
+          "label": "I want to learn how companies raise capital and do M&A.",
+          "nextNodeId": "q1_ok",
+          "statDeltas": { "professionalism": 4, "storytelling": 2 },
+          "feedback": "Good direction. In the room, add one concrete example — a deal or skill you want to build."
+        },
+        {
+          "id": "q1_c",
+          "label": "I just want to make a lot of money.",
+          "nextNodeId": "q1_weak",
+          "statDeltas": { "professionalism": -2 },
+          "feedback": "Be honest with yourself, but in the room lead with intellectual curiosity and the work — not compensation. You'll stand out."
+        }
+      ]
+    },
+    "q1_good": {
+      "id": "q1_good",
+      "speaker": "npc",
+      "text": "Good — that's the kind of thing we want to hear. Alright, one more: what's one thing you've done that shows you can handle pressure?",
+      "next": "q2"
+    },
+    "q1_ok": {
+      "id": "q1_ok",
+      "speaker": "npc",
+      "text": "Got it. Next: what's one thing you've done that shows you can handle pressure?",
+      "next": "q2"
+    },
+    "q1_weak": {
+      "id": "q1_weak",
+      "speaker": "npc",
+      "text": "No judgment — just try to focus on the work and the learning curve when you're in the room. What's one thing you've done that shows you can handle pressure?",
+      "next": "q2"
+    },
+    "q2": {
+      "id": "q2",
+      "speaker": "npc",
+      "text": "Give me a quick example — 30 seconds.",
+      "choices": [
+        {
+          "id": "q2_a",
+          "label": "I led a team project with a tight deadline and we delivered on time.",
+          "nextNodeId": "q2_good",
+          "statDeltas": { "storytelling": 5 },
+          "feedback": "Clear and concise. That's the format you want in real chats."
+        },
+        {
+          "id": "q2_b",
+          "label": "I balanced a heavy course load with a part-time role and still hit my grades.",
+          "nextNodeId": "q2_good",
+          "statDeltas": { "storytelling": 4 },
+          "feedback": "Solid. In the room, add the outcome — what did you deliver or learn?"
+        },
+        {
+          "id": "q2_c",
+          "label": "Um, I've had a lot of deadlines in school...",
+          "nextNodeId": "q2_weak",
+          "statDeltas": { "storytelling": 2 },
+          "feedback": "Prep one concrete STAR story before your next chat. It makes a huge difference — I'll help you build that here."
+        }
+      ]
+    },
+    "q2_good": {
+      "id": "q2_good",
+      "speaker": "npc",
+      "text": "Nice. Last one: how do you stay on top of markets and current events?",
+      "next": "q3"
+    },
+    "q2_weak": {
+      "id": "q2_weak",
+      "speaker": "npc",
+      "text": "You'll get there. One more: how do you stay on top of markets and current events?",
+      "next": "q3"
+    },
+    "q3": {
+      "id": "q3",
+      "speaker": "npc",
+      "text": "We want to see that you're curious — not that you know everything.",
+      "choices": [
+        {
+          "id": "q3_a",
+          "label": "I read the Wall Street Journal and follow a few deal newsletters; I also skim earnings summaries for companies I'm interested in.",
+          "nextNodeId": "end",
+          "statDeltas": { "professionalism": 4 },
+          "feedback": "Specific and believable. That's the bar."
+        },
+        {
+          "id": "q3_b",
+          "label": "I try to check the news and Bloomberg when I can.",
+          "nextNodeId": "end",
+          "statDeltas": { "professionalism": 3 },
+          "feedback": "Good start. Name one or two sources you actually use — it sounds more genuine."
+        },
+        {
+          "id": "q3_c",
+          "label": "I don't really follow markets yet, but I'm willing to learn.",
+          "nextNodeId": "end",
+          "statDeltas": { "professionalism": 1 },
+          "feedback": "Honest. Before your next chat, pick one deal or headline and have a view. Shows initiative."
+        }
+      ]
+    },
+    "end": {
+      "id": "end",
+      "speaker": "npc",
+      "text": "That's the basics. Before we get you in front of anyone else, you need to know your technicals — accounting, valuation, the stuff that comes up in every interview. I'll give you homework: short drills, 10 minutes a day. First coffee chat is on me — you're in.",
+      "feedback": "You've completed your first coffee chat. Head to the map and try a skill drill when you're ready."
+    }
+  }
+}

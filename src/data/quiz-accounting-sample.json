@@ -1,0 +1,26 @@
+[
+  {
+    "id": "acc-1",
+    "format": "flash_q",
+    "topic": "accounting",
+    "question": "Walk me through the three financial statements.",
+    "correctAnswer": "The income statement shows revenue minus expenses to get net income. The cash flow statement starts with net income and adjusts for non-cash items and changes in working capital to get cash from operations, then investing and financing. The balance sheet shows assets = liabilities + equity at a point in time. Net income flows from the income statement to the balance sheet (retained earnings) and to the cash flow statement.",
+    "options": []
+  },
+  {
+    "id": "acc-2",
+    "format": "flash_q",
+    "topic": "accounting",
+    "question": "If depreciation goes up by $10, what happens to the three statements?",
+    "correctAnswer": "Income statement: operating income and net income down by $6 (after 40% tax). Cash flow: add back the $10 depreciation (non-cash), so CFO up by $4. Balance sheet: PP&E down $10, retained earnings down $6, cash up $4 — balances.",
+    "options": []
+  },
+  {
+    "id": "acc-3",
+    "format": "flash_q",
+    "topic": "accounting",
+    "question": "What is the difference between accrual and cash accounting?",
+    "correctAnswer": "Accrual accounting records revenue when earned and expenses when incurred, regardless of cash. Cash accounting records when cash is received or paid. Public companies use accrual (GAAP/IFRS) for a more accurate picture of performance.",
+    "options": []
+  }
+]

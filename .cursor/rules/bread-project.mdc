@@ -1,0 +1,41 @@
+---
+description: Bread app — stack, GVD constraints, and build order
+alwaysApply: true
+---
+
+# Bread — Finance Recruiting RPG (Web MVP)
+
+## What we're building
+
+Career RPG that trains college students to navigate finance recruiting in ~10 min/day. Players do onboarding with Riley (Goldman analyst NPC), land on Finance City map, run coffee-chat simulations and M&I-style technical drills, and earn stats/XP/streaks. Product promise: *"Use this app 10 minutes a day and you will understand the finance landscape, know what to do next in recruiting, and build interview readiness — without needing mentors."*
+
+## Tech stack (do not change unless asked)
+
+- **Framework:** React (Vite), TypeScript. No Next.js.
+- **State:** Zustand. Player state: stats, XP, streak, onboarding answers, rank.
+- **Backend/DB:** Supabase (Postgres + Auth). Optional for first run; env: `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`.
+- **Animations:** Framer Motion for UI/transitions; Rive only when character/city assets exist.
+- **Content:** JSON in repo — dialogue trees, quiz questions. No CMS for MVP.
+- **Deploy:** Vercel. Future: React Native (Expo) for iOS, same logic + content.
+
+## Design (GVD v2.4)
+
+- **Background:** `#F5F2EC` (parchment). No dark mode.
+- **Palette:** ochre, terracotta, sage, sky blue, plum. CSS vars in `src/index.css`.
+- **Fonts:** Cormorant Garamond (display), Jost (UI). Loaded in `index.html`.
+- **Tone:** Supportive, sharp, realistic. Not “hustle bro”; respect the user’s intelligence.
+
+## MVP scope (build order)
+
+1. Onboarding (5 screens): Hook → Riley intro → 2 questions (grad year, accounting) → first coffee chat → land on map. Target: in-game within ~60 seconds.
+2. Finance City map: hub; only Wall Street District playable; others visible but fogged.
+3. Coffee chat engine: branching dialogue from JSON; stat deltas; coaching feedback.
+4. M&I 400 quiz engine: Flash Q from JSON; spaced repetition for wrong answers.
+5. Player progression: 5 stats (0–100), ranks (Candidate → Analyst), XP, streak. Stats never decrease globally.
+6. Daily loop: from map → Daily Quest → Simulation → Skill Drill → Reward + Plan.
+
+## Conventions
+
+- Keep game logic and state shape in plain TS/JSON so the same code can port to React Native later.
+- Use `@/` alias for `src/`. Shared types in `src/types/`; content in `src/data/`.
+- Reference `BUILD_PLAN.md` for full scope and suggested build order.

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "acc-1",
+    "format": "flash_q",
+    "topic": "accounting",
+    "concept": "Companies report their finances in three main statements: the income statement (revenue and expenses), the balance sheet (what they own and owe), and the cash flow statement (actual cash in and out).",
+    "question": "Walk me through the three financial statements.",
+    "correctAnswer": "The income statement shows revenue minus expenses to get net income. The cash flow statement starts with net income and adjusts for non-cash items and changes in working capital to get cash from operations, then investing and financing. The balance sheet shows assets = liabilities + equity at a point in time. Net income flows from the income statement to the balance sheet (retained earnings) and to the cash flow statement.",
+    "options": []
+  },
+  {
+    "id": "acc-2",
+    "format": "flash_q",
+    "topic": "accounting",
+    "concept": "Depreciation is a non-cash expense: it reduces profit on the income statement but doesn't use cash. So when you look at cash flow, you add it back.",
+    "question": "If depreciation goes up by $10, what happens to the three statements?",
+    "correctAnswer": "Income statement: operating income and net income down by $6 (after 40% tax). Cash flow: add back the $10 depreciation (non-cash), so CFO up by $4. Balance sheet: PP&E down $10, retained earnings down $6, cash up $4 — balances.",
+    "options": []
+  },
+  {
+    "id": "acc-3",
+    "format": "flash_q",
+    "topic": "accounting",
+    "concept": "Accrual accounting records revenue when it's earned and expenses when they're incurred, even if cash hasn't moved yet. Most public companies use this so the numbers reflect reality better than cash alone.",
+    "question": "What is the difference between accrual and cash accounting?",
+    "correctAnswer": "Accrual accounting records revenue when earned and expenses when incurred, regardless of cash. Cash accounting records when cash is received or paid. Public companies use accrual (GAAP/IFRS) for a more accurate picture of performance.",
+    "options": []
+  },
+  {
+    "id": "acc-4",
+    "format": "flash_q",
+    "topic": "accounting",
+    "concept": "The three statements are connected. Net income from the income statement flows into the balance sheet (as retained earnings) and into the cash flow statement (as the starting point). Ending cash on the cash flow statement equals cash on the balance sheet.",
+    "question": "How do the three statements link together?",
+    "correctAnswer": "Net income from the income statement flows to the balance sheet as retained earnings and to the cash flow statement as the starting point. The ending cash on the cash flow statement equals cash on the balance sheet. Changes in balance sheet items (e.g. working capital) drive the adjustments on the cash flow statement.",
+    "options": []
+  },
+  {
+    "id": "acc-5",
+    "format": "flash_q",
+    "topic": "accounting",
+    "concept": "Working capital is short-term assets minus short-term liabilities (often excluding cash). If a company has more receivables (money owed to them), they've earned revenue but haven't collected cash yet — so it's a use of cash.",
+    "question": "What is working capital? How does an increase in accounts receivable affect the cash flow statement?",
+    "correctAnswer": "Working capital is current assets minus current liabilities (often defined as excluding cash). An increase in accounts receivable is a use of cash: you've delivered but not yet collected, so it's a subtraction from net income when calculating cash from operations.",
+    "options": []
+  },
+  {
+    "id": "acc-6",
+    "format": "flash_q",
+    "topic": "accounting",
+    "concept": "Buying inventory uses cash (you paid for it) but doesn't hit the income statement until you sell it. So on the cash flow statement, an increase in inventory is a use of cash.",
+    "question": "If inventory goes up by $5, what happens to the three statements?",
+    "correctAnswer": "No change to the income statement (until the inventory is sold). Cash flow: increase in inventory is a use of cash, so subtract $5 from CFO. Balance sheet: inventory up $5, cash down $5.",
+    "options": []
+  },
+  {
+    "id": "acc-7",
+    "format": "flash_q",
+    "topic": "accounting",
+    "concept": "GAAP is the US set of accounting rules; IFRS is used in many other countries. They're similar in spirit but differ in details (e.g. how you value inventory or treat certain costs).",
+    "question": "What is the difference between GAAP and IFRS?",
+    "correctAnswer": "GAAP is US standards (FASB); IFRS is international (IASB). Key differences include LIFO (allowed under GAAP, not IFRS), treatment of development costs (capitalize under IFRS, expense under GAAP in many cases), and lease classification. Many countries use IFRS; the US uses GAAP with a path toward convergence.",
+    "options": []
+  },
+  {
+    "id": "acc-8",
+    "format": "flash_q",
+    "topic": "accounting",
+    "concept": "EBITDA is earnings before interest, taxes, depreciation, and amortization. It's a quick way to compare companies' operating performance without the noise from debt, taxes, or how they depreciate assets.",
+    "question": "What is EBITDA and why do we use it?",
+    "correctAnswer": "EBITDA is earnings before interest, taxes, depreciation, and amortization. It's a proxy for operating cash flow and allows comparison across companies with different capital structures (debt), tax situations, and depreciation policies. Used in trading comps and as a quick operational metric.",
+    "options": []
+  },
+  {
+    "id": "acc-9",
+    "format": "flash_q",
+    "topic": "accounting",
+    "concept": "When a company borrows money (issues debt), cash goes up and debt goes up on the balance sheet. Later, interest on that debt is an expense on the income statement.",
+    "question": "A company issues $100 of debt. What happens to the three statements?",
+    "correctAnswer": "Income statement: interest expense increases (reduces net income). Cash flow: debt issuance is a financing inflow, so CFF up $100. Balance sheet: cash up $100, debt up $100. No change to operating or investing sections initially.",
+    "options": []
+  },
+  {
+    "id": "acc-10",
+    "format": "flash_q",
+    "topic": "accounting",
+    "concept": "Goodwill appears when one company buys another for more than the value of its assets minus liabilities. It's the extra you paid for things like brand or reputation. If that value drops, you 'impair' (write down) goodwill.",
+    "question": "What is goodwill? How is it created and what happens when it's impaired?",
+    "correctAnswer": "Goodwill is the excess of purchase price over fair value of net assets in an acquisition. It's created in M&A when you pay more than the target's book value. When impaired, you write down goodwill on the balance sheet and take a non-cash charge on the income statement; no cash flow impact.",
+    "options": []
+  },
+  {
+    "id": "acc-11",
+    "format": "flash_q",
+    "topic": "accounting",
+    "concept": "When a company sells new shares (equity), it gets cash. That's a financing inflow: cash and shareholders' equity both go up. No expense on the income statement from the issuance itself.",
+    "question": "Walk me through a $100 stock issuance. Impact on the three statements?",
+    "correctAnswer": "Income statement: no direct impact. Cash flow: $100 inflow in financing (CFF). Balance sheet: cash up $100, shareholders' equity up $100 (e.g. common stock and/or APIC).",
+    "options": []
+  },
+  {
+    "id": "acc-12",
+    "format": "flash_q",
+    "topic": "accounting",
+    "concept": "CapEx is spending on long-lived assets (e.g. equipment); you put it on the balance sheet and depreciate over time. OpEx is day-to-day spending (salaries, rent); you expense it immediately.",
+    "question": "What is the difference between capital expenditures (CapEx) and operating expenses (OpEx)?",
+    "correctAnswer": "CapEx is spending on long-lived assets (PP&E); it's capitalized on the balance sheet and depreciated over time, so it hits the income statement gradually. OpEx is expensed immediately (e.g. salaries, rent, utilities). CapEx is a use of cash in investing (CFI); OpEx reduces operating income and CFO.",
+    "options": []
+  },
+  {
+    "id": "acc-13",
+    "format": "flash_q",
+    "topic": "accounting",
+    "concept": "Dividends are a way to give cash back to shareholders. They're not an expense — they come out of retained earnings and cash. So: income statement unchanged; cash flow shows an outflow in financing.",
+    "question": "If a company pays a $50 dividend, what happens to the three statements?",
+    "correctAnswer": "Income statement: no impact (dividends are not an expense). Cash flow: $50 outflow in financing (CFF). Balance sheet: cash down $50, retained earnings down $50.",
+    "options": []
+  },
+  {
+    "id": "acc-14",
+    "format": "flash_q",
+    "topic": "accounting",
+    "concept": "Deferred revenue is when you get paid before you've delivered the product or service. It's a liability: you owe the customer. When you deliver, you reduce the liability and recognize revenue.",
+    "question": "What is deferred revenue and how does it affect the statements?",
+    "correctAnswer": "Deferred revenue (unearned revenue) is cash received before the company has delivered the good or service. It's a liability on the balance sheet. When revenue is earned, you reduce the liability and recognize revenue on the income statement. Initially: cash up, deferred revenue up; no P&L impact until earned.",
+    "options": []
+  },
+  {
+    "id": "acc-15",
+    "format": "flash_q",
+    "topic": "accounting",
+    "concept": "Free cash flow is the cash a company has left after running the business and investing in assets (e.g. equipment). You start from revenue, subtract costs and taxes, add back non-cash items, adjust for working capital, then subtract CapEx.",
+    "question": "How do you get from revenue to free cash flow (FCF)?",
+    "correctAnswer": "Revenue − COGS − OpEx = EBIT. EBIT × (1 − tax rate) = NOPAT. Add back depreciation and amortization (non-cash), subtract change in working capital, subtract CapEx. That gives you unlevered FCF. (Alternatively: CFO − CapEx for levered FCF.)",
+    "options": []
+  },
+  {
+    "id": "acc-16",
+    "format": "flash_q",
+    "topic": "accounting",
+    "concept": "Margins show how much profit is left at each stage. Gross margin is after cost of goods; operating margin is after operating expenses; net margin is after interest and taxes. Each step includes more costs.",
+    "question": "What is the difference between gross margin, operating margin, and net margin?",
+    "correctAnswer": "Gross margin = (revenue − COGS) / revenue. Operating margin = operating income (EBIT) / revenue. Net margin = net income / revenue. Each steps down by including more expenses: COGS only, then OpEx, then interest and taxes.",
+    "options": []
+  },
+  {
+    "id": "acc-17",
+    "format": "flash_q",
+    "topic": "accounting",
+    "concept": "Buying equipment is an investing activity: cash goes out, and you add the asset to the balance sheet. You don't expense the full amount immediately — you depreciate it over time.",
+    "question": "If a company buys $80 of equipment with cash, what happens to the three statements?",
+    "correctAnswer": "Income statement: no immediate impact (you capitalize the asset). Cash flow: $80 outflow in investing (CFI). Balance sheet: PP&E up $80, cash down $80. Depreciation will hit the income statement in future periods.",
+    "options": []
+  },
+  {
+    "id": "acc-18",
+    "format": "flash_q",
+    "topic": "accounting",
+    "concept": "The accounting equation is the foundation: Assets = Liabilities + Equity. Everything the company owns (assets) was funded by either borrowing (liabilities) or by owners (equity). It always balances.",
+    "question": "What is the accounting equation?",
+    "correctAnswer": "Assets = Liabilities + Shareholders' Equity. Everything the company owns (assets) is financed by either debt (liabilities) or ownership (equity). It must balance on every transaction.",
+    "options": []
+  },
+  {
+    "id": "acc-19",
+    "format": "flash_q",
+    "topic": "accounting",
+    "concept": "Accounts payable is money you owe suppliers. If it goes up, you've received goods or services but haven't paid yet — so you've effectively held on to cash. That's a source of cash when calculating cash flow.",
+    "question": "How does an increase in accounts payable affect the cash flow statement?",
+    "correctAnswer": "An increase in accounts payable is a source of cash: you've received goods or services but not yet paid. So you add it back to net income when calculating cash from operations (same idea as the indirect method adjustments for working capital).",
+    "options": []
+  },
+  {
+    "id": "acc-20",
+    "format": "flash_q",
+    "topic": "accounting",
+    "concept": "Cash from operations (CFO) is cash generated by the core business. Free cash flow (FCF) is what's left after you spend on maintaining and growing assets (CapEx) — the cash truly available to investors.",
+    "question": "What is the difference between cash flow from operations (CFO) and free cash flow (FCF)?",
+    "correctAnswer": "CFO is cash generated from core business operations (after working capital changes). FCF is typically CFO minus CapEx — the cash available to debt and equity holders after maintaining and growing the asset base. Unlevered FCF also adds back interest and adjusts for tax shield.",
+    "options": []
+  }
+]

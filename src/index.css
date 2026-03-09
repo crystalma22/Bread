@@ -1,0 +1,53 @@
+/* Bread — GVD design tokens (v2.4) */
+:root {
+  /* Background */
+  --color-bg: #f5f2ec;
+  --color-bg-elevated: #faf8f5;
+
+  /* Palette: earthy + vibrant */
+  --color-ochre: #c4a35a;
+  --color-terracotta: #c75c4a;
+  --color-sage: #7d9b76;
+  --color-sky: #6b9ac4;
+  --color-plum: #8b6b9e;
+
+  /* UI */
+  --color-text: #2c2c2c;
+  --color-text-muted: #6b6b6b;
+  --color-border: #e0dcd5;
+  --color-success: var(--color-sage);
+  --color-error: var(--color-terracotta);
+
+  /* Typography */
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-ui: "Jost", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-ui);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@keyframes fogPulse {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 0.95; }
+}

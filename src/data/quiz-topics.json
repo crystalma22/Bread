@@ -1,0 +1,39 @@
+{
+  "topics": [
+    {
+      "id": "accounting",
+      "label": "Accounting",
+      "learningModuleSlug": "accounting-3-statements",
+      "questionFile": "quiz-accounting-sample.json",
+      "description": "3 statements, linkages, accounting mechanics"
+    },
+    {
+      "id": "valuation",
+      "label": "Valuation",
+      "learningModuleSlug": "equity-enterprise-value",
+      "questionFile": null,
+      "description": "Equity value, enterprise value, DCF, multiples"
+    },
+    {
+      "id": "mergers",
+      "label": "M&A / Merger models",
+      "learningModuleSlug": "ma-merger-models",
+      "questionFile": null,
+      "description": "M&A deals and merger models"
+    },
+    {
+      "id": "lbo",
+      "label": "LBO",
+      "learningModuleSlug": "lbo-models",
+      "questionFile": null,
+      "description": "Leveraged buyouts and LBO models"
+    },
+    {
+      "id": "core",
+      "label": "Core concepts",
+      "learningModuleSlug": "core-concepts",
+      "questionFile": null,
+      "description": "Core IB concepts and frameworks"
+    }
+  ]
+}

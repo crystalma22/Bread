@@ -1,0 +1,44 @@
+{
+  "npcs": [
+    {
+      "id": "riley",
+      "name": "Riley",
+      "title": "Second-year analyst, Goldman Sachs",
+      "initial": "R",
+      "district": "Wall Street",
+      "seniority": "analyst"
+    },
+    {
+      "id": "npc_analyst_2",
+      "name": "Jordan",
+      "title": "Analyst, TBD",
+      "initial": "J",
+      "district": "Wall Street",
+      "seniority": "analyst"
+    },
+    {
+      "id": "npc_associate_1",
+      "name": "Morgan",
+      "title": "Associate, TBD",
+      "initial": "M",
+      "district": "Wall Street",
+      "seniority": "associate"
+    },
+    {
+      "id": "npc_vp_1",
+      "name": "Alex",
+      "title": "VP, TBD",
+      "initial": "A",
+      "district": "Wall Street",
+      "seniority": "vp"
+    },
+    {
+      "id": "npc_recruiter_1",
+      "name": "Sam",
+      "title": "Campus Recruiter, TBD",
+      "initial": "S",
+      "district": "Wall Street",
+      "seniority": "recruiter"
+    }
+  ]
+}
