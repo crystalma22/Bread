@@ -4,7 +4,7 @@
       "id": "accounting",
       "label": "Accounting",
       "learningModuleSlug": "accounting-3-statements",
-      "questionFile": "quiz-accounting-sample.json",
+      "questionFile": "quiz-accounting.json",
       "description": "3 statements, linkages, accounting mechanics"
     },
     {

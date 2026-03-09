@@ -41,6 +41,7 @@ const styles: Record<string, React.CSSProperties> = {
   screen: {
     minHeight: '100vh',
     padding: 24,
+    paddingTop: 60,
     background: 'var(--color-bg)',
     display: 'flex',
     flexDirection: 'column',

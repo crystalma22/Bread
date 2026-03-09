@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import type { QuizQuestion } from '@/types/quiz'
+import { getDisplayAnswer } from '@/types/quiz'
 import { BackToMap } from '@/components/BackToMap'
 import { usePlayerStore } from '@/store/playerStore'
 import quizAccounting from '@/data/quiz-accounting.json'
@@ -109,7 +110,7 @@ export function RecallQuiz() {
           <>
             <div style={styles.answerBox}>
               <p style={styles.answerLabel}>Answer</p>
-              <p style={styles.answerText}>{question.correctAnswer}</p>
+              <p style={styles.answerText}>{getDisplayAnswer(question)}</p>
             </div>
             <div style={styles.actions}>
               <button type="button" onClick={handleGotIt} style={styles.gotItBtn}>Got it</button>
@@ -126,7 +127,7 @@ const styles: Record<string, React.CSSProperties> = {
   screen: {
     minHeight: '100vh',
     padding: 24,
-    paddingTop: 16,
+    paddingTop: 60,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',

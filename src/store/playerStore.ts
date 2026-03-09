@@ -1,6 +1,6 @@
 import { create } from 'zustand'
-import type { PlayerState, PlayerStats, Rank, StatKey } from '@/types/player'
-import { INITIAL_STATS } from '@/types/player'
+import type { PlayerState, PlayerStats, StatKey } from '@/types/player'
+import { INITIAL_STATS, rankFromXp } from '@/types/player'
 
 const clampStat = (v: number) => Math.max(0, Math.min(100, Math.round(v)))
 
@@ -62,7 +62,10 @@ export const usePlayerStore = create<PlayerState & {
     return { stats: next }
   }),
 
-  addXp: (amount) => set((state) => ({ xp: state.xp + amount })),
+  addXp: (amount) => set((state) => {
+    const xp = state.xp + amount
+    return { xp, rank: rankFromXp(xp) }
+  }),
 
   incrementStreak: () => set((state) => ({
     streak: state.streak + 1,

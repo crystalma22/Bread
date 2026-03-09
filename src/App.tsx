@@ -1,15 +1,35 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { lazy, Suspense } from 'react'
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { usePlayerStore } from '@/store/playerStore'
+import { PlayerHUD } from '@/components/PlayerHUD'
 import { OnboardingHook } from '@/pages/onboarding/OnboardingHook'
-import { OnboardingRileyIntro } from '@/pages/onboarding/OnboardingRileyIntro'
-import { OnboardingQuestions } from '@/pages/onboarding/OnboardingQuestions'
-import { OnboardingChooseTrack } from '@/pages/onboarding/OnboardingChooseTrack'
-import { OnboardingCoffee } from '@/pages/onboarding/OnboardingCoffee'
-import { Map } from '@/pages/Map'
-import { QuizSession } from '@/pages/QuizSession'
-import { RecallQuiz } from '@/pages/RecallQuiz'
-import { TechnicalsHub } from '@/pages/TechnicalsHub'
-import { LessonView } from '@/pages/LessonView'
+
+const OnboardingRileyIntro = lazy(() => import('@/pages/onboarding/OnboardingRileyIntro').then((m) => ({ default: m.OnboardingRileyIntro })))
+const OnboardingQuestions = lazy(() => import('@/pages/onboarding/OnboardingQuestions').then((m) => ({ default: m.OnboardingQuestions })))
+const OnboardingChooseTrack = lazy(() => import('@/pages/onboarding/OnboardingChooseTrack').then((m) => ({ default: m.OnboardingChooseTrack })))
+const OnboardingCoffee = lazy(() => import('@/pages/onboarding/OnboardingCoffee').then((m) => ({ default: m.OnboardingCoffee })))
+const Map = lazy(() => import('@/pages/Map').then((m) => ({ default: m.Map })))
+const QuizSession = lazy(() => import('@/pages/QuizSession').then((m) => ({ default: m.QuizSession })))
+const RecallQuiz = lazy(() => import('@/pages/RecallQuiz').then((m) => ({ default: m.RecallQuiz })))
+const TechnicalsHub = lazy(() => import('@/pages/TechnicalsHub').then((m) => ({ default: m.TechnicalsHub })))
+const LessonView = lazy(() => import('@/pages/LessonView').then((m) => ({ default: m.LessonView })))
+
+function RouteFallback() {
+  return (
+    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--color-bg)', fontFamily: 'var(--font-ui)', color: 'var(--color-text-muted)' }}>
+      Loading…
+    </div>
+  )
+}
+
+/** Only show the HUD once onboarding is done, and not during onboarding screens. */
+function HUDLayer() {
+  const hasCompletedOnboarding = usePlayerStore((s) => s.hasCompletedOnboarding)
+  const { pathname } = useLocation()
+  const isOnboarding = pathname === '/' || pathname.startsWith('/onboarding')
+  if (!hasCompletedOnboarding || isOnboarding) return null
+  return <PlayerHUD />
+}
 
 function RequireOnboarding({ children }: { children: React.ReactNode }) {
   const hasCompletedOnboarding = usePlayerStore((s) => s.hasCompletedOnboarding)
@@ -57,29 +77,32 @@ export default function App() {
     <div style={phoneWrapperStyle}>
       <div style={phoneFrameStyle}>
         <BrowserRouter>
-          <Routes>
-        <Route path="/" element={<OnboardingHook />} />
-        <Route path="/onboarding/riley" element={<OnboardingRileyIntro />} />
-        <Route path="/onboarding/questions" element={<OnboardingQuestions />} />
-        <Route path="/onboarding/choose-track" element={<OnboardingChooseTrack />} />
-        <Route path="/onboarding/coffee" element={<OnboardingCoffee />} />
-        <Route
-          path="/map"
-          element={
-            <RequireOnboarding>
-              <RequireRecallGate>
-                <Map />
-              </RequireRecallGate>
-            </RequireOnboarding>
-          }
-        />
-        <Route path="/recall" element={<RequireOnboarding><RecallQuiz /></RequireOnboarding>} />
-        <Route path="/technicals" element={<RequireOnboarding><TechnicalsHub /></RequireOnboarding>} />
-        <Route path="/technicals/:slug" element={<RequireOnboarding><LessonView /></RequireOnboarding>} />
-        <Route path="/daily" element={<RequireOnboarding><div style={{ padding: 24 }}>Daily loop (quest → simulation → drill → reward) — coming next</div></RequireOnboarding>} />
-        <Route path="/quiz" element={<RequireOnboarding><QuizSession /></RequireOnboarding>} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
+          <HUDLayer />
+          <Suspense fallback={<RouteFallback />}>
+            <Routes>
+              <Route path="/" element={<OnboardingHook />} />
+              <Route path="/onboarding/riley" element={<OnboardingRileyIntro />} />
+              <Route path="/onboarding/questions" element={<OnboardingQuestions />} />
+              <Route path="/onboarding/choose-track" element={<OnboardingChooseTrack />} />
+              <Route path="/onboarding/coffee" element={<OnboardingCoffee />} />
+              <Route
+                path="/map"
+                element={
+                  <RequireOnboarding>
+                    <RequireRecallGate>
+                      <Map />
+                    </RequireRecallGate>
+                  </RequireOnboarding>
+                }
+              />
+              <Route path="/recall" element={<RequireOnboarding><RecallQuiz /></RequireOnboarding>} />
+              <Route path="/technicals" element={<RequireOnboarding><TechnicalsHub /></RequireOnboarding>} />
+              <Route path="/technicals/:slug" element={<RequireOnboarding><LessonView /></RequireOnboarding>} />
+              <Route path="/daily" element={<RequireOnboarding><div style={{ padding: 24 }}>Daily loop (quest → simulation → drill → reward) — coming next</div></RequireOnboarding>} />
+              <Route path="/quiz" element={<RequireOnboarding><QuizSession /></RequireOnboarding>} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </Suspense>
         </BrowserRouter>
       </div>
     </div>

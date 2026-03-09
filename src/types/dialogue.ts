@@ -1,3 +1,5 @@
+import type { StatKey } from '@/types/player'
+
 /** Single node in a dialogue tree */
 export interface DialogueNode {
   id: string
@@ -7,7 +9,7 @@ export interface DialogueNode {
   next?: string
   choices?: DialogueChoice[]
   /** Stat deltas applied when this node is reached (e.g. for player choices) */
-  statDeltas?: Partial<Record<string, number>>
+  statDeltas?: Partial<Record<StatKey, number>>
   /** Coaching feedback shown after this node */
   feedback?: string
 }
@@ -16,7 +18,7 @@ export interface DialogueChoice {
   id: string
   label: string
   nextNodeId: string
-  statDeltas?: Partial<Record<string, number>>
+  statDeltas?: Partial<Record<StatKey, number>>
   feedback?: string
 }
 

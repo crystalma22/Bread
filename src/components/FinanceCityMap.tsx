@@ -255,7 +255,16 @@ export function FinanceCityMap({ onDistrictClick, onZoomIntoDistrict, zoomedDist
           )}
           {/* Districts — invisible hit areas when using image; labels on top */}
           {DISTRICTS.map((d) => (
-            <g key={d.id} data-district style={{ cursor: 'pointer' }}>
+            <g
+              key={d.id}
+              data-district
+              style={{ cursor: 'pointer' }}
+              role="button"
+              tabIndex={0}
+              aria-label={`${d.name}${d.playable ? ', playable' : ', coming soon'}`}
+              onClick={() => handleDistrictClick(d)}
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleDistrictClick(d); } }}
+            >
               <polygon
                 points={d.points}
                 fill={MAP_IMAGE_URL ? 'transparent' : d.playable ? 'url(#mvRegionActive)' : 'url(#mvRegionLocked)'}
@@ -263,7 +272,6 @@ export function FinanceCityMap({ onDistrictClick, onZoomIntoDistrict, zoomedDist
                 strokeWidth={d.playable ? 2 : 1.5}
                 opacity={MAP_IMAGE_URL ? 1 : d.playable ? 1 : 0.88}
                 filter={!MAP_IMAGE_URL && d.playable ? 'url(#mvSoftShadow)' : undefined}
-                onClick={() => handleDistrictClick(d)}
               />
               <text
                 x={d.labelX}

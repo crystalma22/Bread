@@ -55,3 +55,48 @@ export const INITIAL_STATS: PlayerStats = {
   networkingSkill: 0,
   interviewReadiness: 0,
 }
+
+/** XP thresholds for each rank. */
+export const RANK_THRESHOLDS: Record<Rank, number> = {
+  candidate: 0,
+  'intern-ready': 100,
+  'interview-ready': 300,
+  'offer-ready': 600,
+  analyst: 1000,
+}
+
+/** Ordered list from lowest to highest rank. */
+export const RANK_ORDER: Rank[] = [
+  'candidate',
+  'intern-ready',
+  'interview-ready',
+  'offer-ready',
+  'analyst',
+]
+
+/** Friendly display labels for each rank. */
+export const RANK_LABELS: Record<Rank, string> = {
+  candidate: 'Candidate',
+  'intern-ready': 'Intern-ready',
+  'interview-ready': 'Interview-ready',
+  'offer-ready': 'Offer-ready',
+  analyst: 'Analyst',
+}
+
+/** XP needed to reach the next rank (null if already at top). */
+export function xpToNextRank(xp: number): { nextRank: Rank | null; xpNeeded: number } {
+  const currentIdx = RANK_ORDER.findLastIndex((r) => xp >= RANK_THRESHOLDS[r])
+  const nextIdx = currentIdx + 1
+  if (nextIdx >= RANK_ORDER.length) return { nextRank: null, xpNeeded: 0 }
+  const nextRank = RANK_ORDER[nextIdx]
+  return { nextRank, xpNeeded: RANK_THRESHOLDS[nextRank] - xp }
+}
+
+/** Compute rank from XP. */
+export function rankFromXp(xp: number): Rank {
+  let rank: Rank = 'candidate'
+  for (const r of RANK_ORDER) {
+    if (xp >= RANK_THRESHOLDS[r]) rank = r
+  }
+  return rank
+}

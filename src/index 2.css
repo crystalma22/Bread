@@ -47,26 +47,6 @@ h1, h2, h3 {
   min-height: 100vh;
 }
 
-/* HUD clearance: push scrollable content below the 52px HUD bar */
-.hud-offset {
-  padding-top: 52px;
-}
-
-/* Focus visible for keyboard / a11y */
-button:focus-visible,
-a:focus-visible,
-[role="button"]:focus-visible {
-  outline: 2px solid var(--color-sky);
-  outline-offset: 2px;
-}
-
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
-  outline: 2px solid var(--color-sky);
-  outline-offset: 0;
-}
-
 @keyframes fogPulse {
   0%, 100% { opacity: 0.85; }
   50% { opacity: 0.95; }

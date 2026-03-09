@@ -178,5 +178,70 @@
     "question": "What is the difference between cash flow from operations (CFO) and free cash flow (FCF)?",
     "correctAnswer": "CFO is cash generated from core business operations (after working capital changes). FCF is typically CFO minus CapEx — the cash available to debt and equity holders after maintaining and growing the asset base. Unlevered FCF also adds back interest and adjusts for tax shield.",
     "options": []
+  },
+  {
+    "id": "acc-mc-1",
+    "format": "multiple_choice",
+    "topic": "accounting",
+    "question": "Which of the following is a non-cash expense?",
+    "options": [
+      { "id": "a", "label": "Depreciation" },
+      { "id": "b", "label": "Interest paid" },
+      { "id": "c", "label": "Dividends paid" },
+      { "id": "d", "label": "Salary expense" }
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "id": "acc-mc-2",
+    "format": "multiple_choice",
+    "topic": "accounting",
+    "concept": "The balance sheet must always balance: Assets = Liabilities + Equity.",
+    "question": "Where does net income from the income statement flow to on the balance sheet?",
+    "options": [
+      { "id": "a", "label": "Retained earnings" },
+      { "id": "b", "label": "Cash" },
+      { "id": "c", "label": "Accounts receivable" },
+      { "id": "d", "label": "Common stock" }
+    ],
+    "correctAnswer": "a"
+  },
+  {
+    "id": "acc-tf-1",
+    "format": "true_false",
+    "topic": "accounting",
+    "question": "An increase in accounts receivable is a source of cash on the cash flow statement.",
+    "correctAnswer": "false"
+  },
+  {
+    "id": "acc-fill-1",
+    "format": "fill_blank",
+    "topic": "accounting",
+    "question": "What does EBITDA stand for? (Earnings before ___, ___, ___, and ___)",
+    "correctAnswer": "interest, taxes, depreciation, amortization",
+    "acceptableAnswers": ["interest, taxes, depreciation and amortization"]
+  },
+  {
+    "id": "acc-order-1",
+    "format": "ordering",
+    "topic": "accounting",
+    "question": "Put the three financial statements in the order you would typically build them in a model:",
+    "items": [
+      "Income statement",
+      "Cash flow statement",
+      "Balance sheet"
+    ]
+  },
+  {
+    "id": "acc-match-1",
+    "format": "matching",
+    "topic": "accounting",
+    "question": "Match each item to the statement where it appears:",
+    "pairs": [
+      { "left": "Revenue", "right": "Income statement" },
+      { "left": "Cash", "right": "Balance sheet" },
+      { "left": "CapEx", "right": "Cash flow statement" },
+      { "left": "Retained earnings", "right": "Balance sheet" }
+    ]
   }
 ]

@@ -3,6 +3,9 @@ import { usePlayerStore } from '@/store/playerStore'
 import modulesIndex from '@/data/learning/modules-index.json'
 import type { LearningModule } from '@/types/learning'
 import { BackToMap } from '@/components/BackToMap'
+import { getPlayableTopics } from '@/lib/quizTopics'
+
+const PLAYABLE_TOPIC_IDS = new Set(getPlayableTopics().map((t) => t.id))
 
 const modules = (modulesIndex as { modules: LearningModule[] }).modules.sort((a, b) => a.order - b.order)
 
@@ -32,24 +35,33 @@ export function TechnicalsHub() {
 
       <section style={styles.section}>
         <h2 style={styles.sectionTitle}>Roadmap</h2>
-        <div style={styles.roadmap}>
+        <div style={styles.roadmap}> “why it matters,”        <div style={styles.roadmap}>
           {modules.map((m, i) => {
             const isUnlocked = i === 0 || (i > 0 && hasLearnedSomething);
             const Comp = isUnlocked ? Link : 'div';
             const linkProps = isUnlocked ? { to: `/technicals/${m.slug}` as const } : {};
+            const quizTopic = (m as LearningModule & { quizTopic?: string }).quizTopic;
+            const hasDrill = isUnlocked && quizTopic != null && PLAYABLE_TOPIC_IDS.has(quizTopic);
             return (
               <div key={m.id} style={styles.roadmapRow}>
                 {i > 0 && <div style={styles.connector} />}
-                <Comp
-                  {...linkProps}
-                  style={{
-                    ...styles.node,
-                    ...(isUnlocked ? styles.nodeUnlocked : styles.nodeLocked),
-                  }}
-                >
-                  <span style={styles.nodeNumber}>{i + 1}</span>
-                  <span style={styles.nodeTitle}>{m.title}</span>
-                </Comp>
+                <div style={styles.nodeWrap}>
+                  <Comp
+                    {...linkProps}
+                    style={{
+                      ...styles.node,
+                      ...(isUnlocked ? styles.nodeUnlocked : styles.nodeLocked),
+                    }}
+                  >
+                    <span style={styles.nodeNumber}>{i + 1}</span>
+                    <span style={styles.nodeTitle}>{m.title}</span>
+                  </Comp>
+                  {hasDrill && quizTopic && (
+                    <Link to={`/quiz?topic=${quizTopic}`} style={styles.drillTag}>
+                      Practice
+                    </Link>
+                  )}
+                </div>
               </div>
             );
           })}
@@ -69,6 +81,7 @@ const styles: Record<string, React.CSSProperties> = {
   screen: {
     minHeight: '100vh',
     padding: 24,
+    paddingTop: 60,
     background: 'var(--color-bg)',
   },
   backBar: {
@@ -133,6 +146,23 @@ const styles: Record<string, React.CSSProperties> = {
     flexDirection: 'column',
     alignItems: 'center',
     position: 'relative',
+  },
+  nodeWrap: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: 6,
+  },
+  drillTag: {
+    fontFamily: 'var(--font-ui)',
+    fontSize: '0.6875rem',
+    fontWeight: 600,
+    color: 'var(--color-ochre)',
+    textDecoration: 'none',
+    border: '1px solid var(--color-ochre)',
+    borderRadius: 20,
+    padding: '2px 10px',
+    letterSpacing: '0.03em',
   },
   connector: {
     width: 2,

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
-import type { DialogueTree, DialogueNode } from '@/types/dialogue'
+import { useNavigate, Link } from 'react-router-dom'
+import type { DialogueTree, DialogueNode, DialogueChoice } from '@/types/dialogue'
 import { usePlayerStore } from '@/store/playerStore'
 import { getNpc } from '@/lib/npcs'
 import { NPCDialogueView } from '@/components/NPCDialogueView'
@@ -26,12 +26,12 @@ export function OnboardingCoffee() {
 
   useEffect(() => {
     if (!node) return
-    if (node.statDeltas) applyStatDeltas(node.statDeltas as Record<string, number>)
+    if (node.statDeltas) applyStatDeltas(node.statDeltas)
     if (node.feedback) setFeedback(node.feedback)
   }, [nodeId, node?.id])
 
-  const handleChoice = (nextNodeId: string, choiceDeltas?: Record<string, number>, choiceFeedback?: string) => {
-    if (choiceDeltas) applyStatDeltas(choiceDeltas as Record<string, number>)
+  const handleChoice = (nextNodeId: string, choiceDeltas?: DialogueChoice['statDeltas'], choiceFeedback?: string) => {
+    if (choiceDeltas) applyStatDeltas(choiceDeltas)
     if (choiceFeedback) setFeedback(choiceFeedback)
     setNodeId(nextNodeId)
   }
@@ -48,7 +48,21 @@ export function OnboardingCoffee() {
     navigate('/map')
   }
 
-  if (!node) return null
+  if (!node) {
+    return (
+      <div style={styles.screen}>
+        <div style={styles.errorCard}>
+          <p style={styles.errorText}>Something went wrong with this conversation. The dialogue may be missing or mislinked.</p>
+          <div style={styles.errorActions}>
+            <Link to="/map" style={styles.errorLink}>Back to map</Link>
+            <button type="button" onClick={() => setNodeId(tree.startNodeId)} style={styles.errorBtn}>
+              Restart conversation
+            </button>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   const isEnd = nodeId === 'end'
   const hasChoices = node.choices && node.choices.length > 0
@@ -193,5 +207,42 @@ const styles: Record<string, React.CSSProperties> = {
     color: 'var(--color-text-muted)',
     margin: '12px 0 0',
     fontStyle: 'italic',
+  },
+  errorCard: {
+    maxWidth: 400,
+    padding: 28,
+    background: 'var(--color-bg-elevated)',
+    border: '1px solid var(--color-border)',
+    borderRadius: 16,
+    textAlign: 'center',
+  },
+  errorText: {
+    fontFamily: 'var(--font-ui)',
+    fontSize: '1rem',
+    lineHeight: 1.6,
+    color: 'var(--color-text-muted)',
+    margin: '0 0 24px',
+  },
+  errorActions: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 12,
+    alignItems: 'center',
+  },
+  errorLink: {
+    fontFamily: 'var(--font-ui)',
+    fontSize: '0.9375rem',
+    color: 'var(--color-sky)',
+    textDecoration: 'none',
+  },
+  errorBtn: {
+    padding: '12px 24px',
+    fontFamily: 'var(--font-ui)',
+    fontWeight: 600,
+    fontSize: '0.9375rem',
+    background: 'var(--color-bg)',
+    border: '1px solid var(--color-border)',
+    borderRadius: 8,
+    cursor: 'pointer',
   },
 }
