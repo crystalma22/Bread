@@ -2,19 +2,78 @@
   "id": "accounting-3-statements",
   "slug": "accounting-3-statements",
   "title": "Accounting: 3 Statements",
-  "sourceDoc": "IBIG-04-02-Accounting-3-Statements copy.pdf",
-  "description": "Income statement, cash flow statement, and balance sheet — how they link and how to walk through them in interviews.",
+  "description": "Income statement, cash flow statement, and balance sheet — how they work individually and how they link together. Core to every IB interview.",
   "quizTopic": "accounting",
   "order": 2,
   "sections": [
     {
-      "id": "overview",
-      "title": "Overview",
-      "body": "Replace this with content extracted from IBIG-04-02-Accounting-3-Statements copy.pdf. Use CONTENT_INTEGRATION.md for conversion steps.",
+      "id": "intro",
+      "title": "Why accounting matters in IB",
+      "body": "Investment bankers use financial statements every day — to value companies, build models, and advise clients on deals. If you can't read and explain the three statements fluently, you can't do the job. In interviews, nearly every question about a company starts here.",
       "keyPoints": [
-        "Income statement: revenue − expenses = net income",
-        "Cash flow: starts with net income, adjusts for non-cash and working capital",
-        "Balance sheet: assets = liabilities + equity"
+        "The three statements are the foundation of every financial model",
+        "Interviewers test them at every bank, every year",
+        "You don't need to be an accountant — you need to understand what each number means and how they connect"
+      ]
+    },
+    {
+      "id": "income-statement",
+      "title": "The Income Statement",
+      "body": "The income statement shows a company's financial performance over a period of time (a quarter or a year). It answers: how much did the company earn, and what did it cost?\n\nStructure (top to bottom):\n• Revenue (also called 'sales' or 'top line') — what customers paid\n• COGS (Cost of Goods Sold) — direct costs of making the product/service\n• Gross Profit = Revenue − COGS\n• Operating Expenses (OpEx) — salaries, rent, marketing, R&D\n• EBITDA = Gross Profit − OpEx (often shown separately as a metric)\n• D&A (Depreciation & Amortization) — non-cash expense\n• EBIT (Operating Income) = EBITDA − D&A\n• Interest Expense — cost of debt\n• EBT (Earnings Before Tax) = EBIT − Interest\n• Tax — typically 20–25% of EBT\n• Net Income ('bottom line') = EBT − Tax\n\nKey insight: Net income is an accounting number, not the same as cash. Depreciation reduces net income but doesn't use cash. That's why the cash flow statement exists.",
+      "keyPoints": [
+        "Revenue − COGS = Gross Profit",
+        "Gross Profit − OpEx = EBITDA",
+        "EBITDA − D&A = EBIT (Operating Income)",
+        "EBIT − Interest − Tax = Net Income",
+        "Net income ≠ cash — non-cash items and timing differences mean you need the cash flow statement"
+      ]
+    },
+    {
+      "id": "cash-flow-statement",
+      "title": "The Cash Flow Statement",
+      "body": "The cash flow statement shows the actual cash moving in and out of a business over a period. It has three sections:\n\n1. Cash from Operations (CFO)\nStarts with net income, then adjusts for things that affected profit but not cash:\n• Add back D&A (non-cash expense that reduced income)\n• Subtract increases in working capital assets (e.g. accounts receivable up = cash not yet collected)\n• Add increases in working capital liabilities (e.g. accounts payable up = cash not yet paid)\n\n2. Cash from Investing (CFI)\n• CapEx (buying equipment) — cash outflow\n• Acquisitions — cash outflow\n• Asset sales — cash inflow\n\n3. Cash from Financing (CFF)\n• Debt issued — inflow\n• Debt repaid — outflow\n• Stock issued — inflow\n• Dividends paid — outflow\n• Share buybacks — outflow\n\nEnding Cash = Beginning Cash + CFO + CFI + CFF\n\nThis ending cash balance ties directly to the cash line on the balance sheet — a key linkage point.",
+      "keyPoints": [
+        "CFO: net income adjusted for non-cash items and working capital changes",
+        "Depreciation is added back in CFO because it's non-cash",
+        "Increase in AR = use of cash (earned but not collected); decrease = source",
+        "Increase in AP = source of cash (owed but not paid); decrease = use",
+        "Ending cash on the CFS = cash on the balance sheet"
+      ]
+    },
+    {
+      "id": "balance-sheet",
+      "title": "The Balance Sheet",
+      "body": "The balance sheet is a snapshot of what a company owns and owes at a single point in time. It must always balance:\n\nAssets = Liabilities + Shareholders' Equity\n\nAssets (left side):\n• Current Assets: cash, accounts receivable, inventory, prepaid expenses (expected to convert to cash within a year)\n• Non-current Assets: PP&E (property, plant & equipment), goodwill, intangibles, long-term investments\n\nLiabilities (right side, top):\n• Current Liabilities: accounts payable, accrued expenses, deferred revenue, short-term debt (due within a year)\n• Non-current Liabilities: long-term debt, deferred tax liabilities\n\nShareholders' Equity (right side, bottom):\n• Common stock + APIC (additional paid-in capital)\n• Retained Earnings — accumulated net income minus dividends paid\n• Treasury Stock — shares bought back (reduces equity)\n\nKey insight: Equity is the residual — what's left for shareholders after all obligations. When net income is earned, it flows to retained earnings, increasing equity. When dividends are paid, retained earnings fall.",
+      "keyPoints": [
+        "Assets = Liabilities + Equity — must always balance",
+        "Current assets/liabilities expected to convert to cash within 1 year",
+        "Retained earnings = prior retained earnings + net income − dividends",
+        "PP&E decreases over time due to depreciation",
+        "Goodwill appears after an acquisition and stays until impaired"
+      ]
+    },
+    {
+      "id": "linkages",
+      "title": "How the Three Statements Link",
+      "body": "This is the most tested concept in IB accounting. Interviewers will give you a change and ask what happens to all three statements.\n\nThe flow:\n1. Net income from the Income Statement → flows to the Cash Flow Statement as the starting point for CFO\n2. Net income → also flows to the Balance Sheet as an increase in Retained Earnings (within Equity)\n3. D&A from the Income Statement → added back in the CFO section of the Cash Flow Statement\n4. CapEx from the Cash Flow Statement (CFI) → increases PP&E on the Balance Sheet\n5. Depreciation from the Income Statement → reduces PP&E on the Balance Sheet over time\n6. Changes in working capital (AR, inventory, AP) → appear in CFO on the Cash Flow Statement and change current assets/liabilities on the Balance Sheet\n7. Ending Cash from the Cash Flow Statement = Cash on the Balance Sheet (the key tie-out)\n\nThe balance sheet always balances because:\nBeginning Equity + Net Income − Dividends = Ending Equity\nAnd Assets = Liabilities + Ending Equity\n\nPractice transaction: 'Depreciation goes up by $10'\n• IS: EBIT down $10, Net Income down $6 (at 40% tax)\n• CFS: starts $6 lower (net income), add back $10 D&A → CFO up $4, cash up $4\n• BS: PP&E down $10, retained earnings down $6, cash up $4 → Assets: net −$6; Equity: −$6 → balanced",
+      "keyPoints": [
+        "Net income → retained earnings (BS) and starting point of CFS",
+        "D&A: expense on IS, added back in CFO, reduces PP&E on BS",
+        "Ending cash on CFS = cash on BS — the key tie-out",
+        "Any transaction that hits the IS changes equity through retained earnings",
+        "BS always balances: check that ΔAssets = ΔLiabilities + ΔEquity"
+      ]
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Accounting Concepts",
+      "body": "A few concepts you must know cold:\n\nAccrual Accounting: Revenue is recorded when earned (goods delivered / service rendered), not when cash is received. Expenses are recorded when incurred, not when paid. All public companies use this.\n\nRevenue Recognition (ASC 606): Revenue is recognized when control of the good or service transfers to the customer. Key test: has the performance obligation been satisfied?\n\nNon-cash Items: Depreciation and amortization reduce income but don't use cash. Stock-based compensation (SBC) is also non-cash. All three are added back in CFO.\n\nDeferred Revenue: Cash received before revenue is earned. A liability (you owe the service). When delivered: liability down, revenue up.\n\nWorking Capital: Current Assets − Current Liabilities (often ex-cash and ex-debt). Higher working capital = more cash tied up in operations.\n\nEBITDA vs Net Income: EBITDA strips out D&A, interest, and taxes — it's used to compare operating performance across companies with different capital structures. Net income includes all of these.\n\nFree Cash Flow: CFO − CapEx. The cash a company generates after investing to maintain/grow the business. What's actually available to debt and equity holders.",
+      "keyPoints": [
+        "Accrual: record revenue when earned, expenses when incurred",
+        "Revenue recognized when performance obligation satisfied (control transferred)",
+        "D&A, SBC are non-cash — reduce income, added back in CFO",
+        "Working capital increase = more cash tied up = use of cash in CFO",
+        "FCF = CFO − CapEx (simple definition; unlevered adds back interest)"
       ]
     }
   ]
