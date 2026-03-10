@@ -32,8 +32,8 @@
       "id": "core",
       "label": "Core concepts",
       "learningModuleSlug": "core-concepts",
-      "questionFile": null,
-      "description": "Core IB concepts and frameworks"
+      "questionFile": "quiz-core.json",
+      "description": "What is IB, revenue vs. profit, cash vs. profit, and the three statements overview"
     }
   ]
 }

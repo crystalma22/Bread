@@ -4,6 +4,7 @@
       "id": "core-concepts",
       "slug": "core-concepts",
       "title": "Core Concepts",
+      "description": "Start here. What companies are, what investment banks do, and why profit does not equal cash — explained from scratch.",
       "sourceDoc": "IBIG-04-01-Core-Concepts copy.pdf",
       "quizTopic": "core",
       "order": 1
@@ -12,6 +13,7 @@
       "id": "accounting-3-statements",
       "slug": "accounting-3-statements",
       "title": "Accounting: 3 Statements",
+      "description": "Income statement, balance sheet, and cash flow statement explained with plain-English analogies. The most important module for IB interviews.",
       "sourceDoc": "IBIG-04-02-Accounting-3-Statements copy.pdf",
       "quizTopic": "accounting",
       "order": 2

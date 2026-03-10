@@ -4,11 +4,13 @@ import { BackToMap } from '@/components/BackToMap'
 import type { LearningModule, LearningSection } from '@/types/learning'
 
 // Dynamic module map — add new module files here
+import coreConcepts from '@/data/learning/core-concepts.json'
 import accounting3Statements from '@/data/learning/accounting-3-statements.json'
 import advancedAccounting from '@/data/learning/advanced-accounting.json'
 import modulesIndex from '@/data/learning/modules-index.json'
 
 const MODULE_CONTENT: Record<string, LearningModule> = {
+  'core-concepts': coreConcepts as LearningModule,
   'accounting-3-statements': accounting3Statements as LearningModule,
   'advanced-accounting': advancedAccounting as LearningModule,
 }

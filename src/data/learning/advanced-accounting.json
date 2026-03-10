@@ -2,92 +2,92 @@
   "id": "advanced-accounting",
   "slug": "advanced-accounting",
   "title": "More Advanced Accounting",
-  "description": "Deferred taxes, stock-based compensation, inventory methods, lease accounting, and other topics that come up in more technical IB interviews.",
+  "description": "Once you know the three statements cold, these topics come up in more technical interviews. Each one is explained from scratch — no prior accounting course needed.",
   "quizTopic": "accounting",
   "order": 3,
   "sections": [
     {
-      "id": "deferred-taxes",
-      "title": "Deferred Taxes (DTA and DTL)",
-      "body": "Deferred taxes arise because accounting rules (GAAP) and tax rules sometimes recognize revenue and expenses at different times.\n\nDeferred Tax Liability (DTL): You owe more tax in the future than you've paid so far.\n• Example: Accelerated depreciation for taxes. A company depreciates an asset faster on its tax return than on its income statement. This means it pays less tax now, but will owe more later. So a liability builds up.\n• On the balance sheet: a non-current liability.\n• If DTL increases → the company paid less tax than its income statement shows → source of cash in CFO.\n\nDeferred Tax Asset (DTA): You've paid more tax than you currently owe (or will owe less in the future).\n• Example: Net operating losses (NOLs) carried forward. A company had a loss last year and can use it to reduce future taxable income.\n• On the balance sheet: a non-current asset.\n• If DTA increases → source of cash in CFO (tax you've effectively prepaid or will save).\n\nInterview tip: Most common answer format is 'Is the DTA/DTL increasing or decreasing, and what does that mean for CFO?'",
+      "id": "deferred-taxes-intro",
+      "title": "Deferred Taxes — the gap between what you report and what you pay",
+      "body": "Here's something weird: companies often report different numbers to investors than they report to the IRS. Both are legal. They just follow different rules.\n\nWhen those numbers differ, a timing gap opens up. That gap is what deferred taxes are.\n\nExample: Imagine your company buys a $10,000 machine. For accounting purposes (what you show investors), you depreciate it evenly over 5 years — $2,000/year. But for tax purposes, the IRS lets you write off more upfront — say $5,000 in year 1. This means you pay less tax now. But eventually, you'll owe more later.\n\nThat future obligation is a Deferred Tax Liability (DTL): you've saved on taxes today, but you'll pay them tomorrow.\n\nThe flip side is a Deferred Tax Asset (DTA): when you've overpaid taxes relative to your reported income — for example, if you had a big loss one year and can use it to reduce future taxes. That's a future tax savings — an asset.\n\nOn the cash flow statement: when a DTL increases, you paid less tax than your income statement implies, so it's a source of cash in CFO. When a DTA increases, you've effectively prepaid taxes, so it's a use of cash in CFO.\n\nYou don't need to calculate these precisely yet. The key is to understand why they exist and which direction they move cash.",
       "keyPoints": [
-        "DTL: paid less tax than income suggests — liability, owes more in future",
-        "DTA: paid more tax than income suggests — asset, will save in future",
+        "GAAP rules and tax rules differ — deferred taxes bridge the gap",
+        "DTL: paid less tax now, will owe more later (e.g. accelerated depreciation)",
+        "DTA: paid more tax now, will save in future (e.g. losses to carry forward)",
         "Increase in DTL = source of cash in CFO (like AP going up)",
-        "Increase in DTA = use of cash in CFO (like AR going up)",
-        "Common source: accelerated tax depreciation (DTL) and NOL carry-forwards (DTA)"
+        "Increase in DTA = use of cash in CFO (like AR going up)"
       ]
     },
     {
       "id": "stock-based-comp",
-      "title": "Stock-Based Compensation (SBC)",
-      "body": "Stock-based compensation is when a company pays employees with stock or options instead of (or in addition to) cash.\n\nOn the Income Statement: SBC is an expense that reduces operating income and net income, just like a salary. It appears in OpEx or COGS depending on who receives it.\n\nOn the Cash Flow Statement: SBC is a non-cash expense (no cash actually leaves the company for the grant itself). It gets added back in CFO, similar to D&A.\n\nOn the Balance Sheet: When shares are issued for SBC, equity increases (additional paid-in capital goes up). Retained earnings fall from the expense, but APIC rises from the issuance — net effect depends on timing and structure.\n\nWhy it matters: SBC is large at tech companies. Including it vs. excluding it significantly changes apparent profitability. Be careful — many companies report 'adjusted EBITDA' or 'adjusted net income' that excludes SBC. Analysts and investors debate whether SBC should be treated as a real cost (it is economically dilutive to shareholders).\n\nCommon interview answer: 'SBC is non-cash, so we add it back in CFO. It reduces net income and EBIT, but doesn't reduce operating cash flow directly.'",
+      "title": "Stock-Based Compensation — paying employees in equity",
+      "body": "Many companies, especially tech startups, don't pay all their employees in cash. They give stock or stock options instead. This is called stock-based compensation (SBC).\n\nFrom the employee's perspective, it's valuable — if the company grows, those shares are worth more. From the company's perspective, it's a cost — employees are working in exchange for something valuable.\n\nBut here's the key: no cash leaves the company. The company just issues shares.\n\nSo how does it show up in the financial statements?\n\nIncome statement: SBC is an expense, just like salary. It reduces EBIT and net income. (This is why some profitable-looking companies actually look less profitable once you account for SBC.)\n\nCash flow statement: Since it's non-cash, it gets added back in CFO — similar to depreciation. No cash actually left the company.\n\nBalance sheet: Retained earnings fall (from the income statement expense). But APIC (additional paid-in capital) rises when the shares are issued. The two roughly offset, so equity stays about the same.\n\nWhy does this matter? Big tech companies have enormous SBC. When you see 'adjusted net income' or 'adjusted EBITDA,' they often exclude SBC. Be careful — that's ignoring a real cost. SBC dilutes existing shareholders even if it doesn't reduce cash.",
       "keyPoints": [
-        "SBC is an operating expense — reduces EBIT and net income",
-        "SBC is non-cash — added back in CFO (like D&A)",
-        "Equity increases when shares are issued (APIC up); retained earnings fall from expense",
-        "SBC dilutes existing shareholders — real economic cost even if non-cash",
-        "Watch out for adjusted metrics that exclude SBC — know the difference"
+        "SBC: employees receive equity instead of cash — a real cost even though non-cash",
+        "On IS: expense that reduces EBIT and net income",
+        "On CFS: added back in CFO (non-cash, like D&A)",
+        "On BS: retained earnings fall, APIC rises — equity roughly unchanged",
+        "SBC dilutes shareholders over time — adjusted metrics that exclude it can be misleading"
       ]
     },
     {
-      "id": "inventory",
-      "title": "Inventory Accounting: FIFO, LIFO, and Weighted Average",
-      "body": "When a company sells goods, it needs a method to determine which inventory cost to recognize in COGS. The physical goods may be identical, but the accounting choice affects reported profit.\n\nFIFO (First In, First Out): Assume oldest inventory is sold first.\n• In a rising-price environment: COGS is lower (older, cheaper items sold first), so gross profit and net income are higher. Inventory on the balance sheet reflects recent, higher costs.\n\nLIFO (Last In, First Out): Assume newest inventory is sold first.\n• In a rising-price environment: COGS is higher (newer, more expensive items sold first), so gross profit and net income are lower. Lower taxes.\n• Note: LIFO is allowed under US GAAP but banned under IFRS. If you're comparing a US company using LIFO to a non-US company, you need to adjust.\n\nWeighted Average: Use the average cost of all inventory.\n• Smooths out price fluctuations; results between FIFO and LIFO.\n\nThe LIFO Reserve: Companies using LIFO must disclose the LIFO reserve — the difference between LIFO and FIFO inventory values. To compare companies, you can add the LIFO reserve to inventory to convert to FIFO.",
+      "id": "inventory-methods",
+      "title": "FIFO vs. LIFO — how you value what you sell matters",
+      "body": "When a company sells a product, it needs to decide: which items did we 'sell' first? This matters because if prices are changing, the answer affects how much profit you report.\n\nThink about a sneaker store that buys two batches of the same shoe:\n• Batch 1 (older): 50 pairs at $60 each (bought 3 months ago)\n• Batch 2 (newer): 50 pairs at $80 each (bought last month)\n\nYou then sell 50 pairs at $120 each.\n\nFIFO (First In, First Out): assume you sold the older batch first.\n• COGS: 50 × $60 = $3,000\n• Revenue: 50 × $120 = $6,000\n• Gross Profit: $3,000\n\nLIFO (Last In, First Out): assume you sold the newer batch first.\n• COGS: 50 × $80 = $4,000\n• Revenue: 50 × $120 = $6,000\n• Gross Profit: $2,000\n\nSame revenue, same physical goods — but LIFO shows lower profit because it uses higher costs.\n\nIn a world of rising prices (inflation), LIFO means higher COGS → lower profit → lower taxes. That's why US companies sometimes prefer LIFO for tax purposes. But LIFO is banned under IFRS (the international accounting standard), which is a key difference between US and non-US companies.\n\nWhen you compare companies, you need to check which method they use. To convert a LIFO company to FIFO for comparison, you add the 'LIFO reserve' disclosed in their financial notes.",
       "keyPoints": [
-        "FIFO (rising prices): lower COGS, higher income, higher inventory on BS",
-        "LIFO (rising prices): higher COGS, lower income, lower taxes, lower inventory on BS",
-        "LIFO allowed under GAAP only — not IFRS",
-        "LIFO reserve: difference between LIFO and FIFO inventory — add it back to convert",
-        "Inventory choice doesn't affect cash — just the timing of when cost hits the P&L"
+        "FIFO (rising prices): older, cheaper costs → lower COGS, higher profit, more tax",
+        "LIFO (rising prices): newer, higher costs → higher COGS, lower profit, less tax",
+        "Same goods, different reported profit — inventory method is an accounting choice",
+        "LIFO is allowed under US GAAP but banned under IFRS",
+        "The LIFO reserve lets you convert between methods for comparison"
       ]
     },
     {
       "id": "lease-accounting",
-      "title": "Lease Accounting (ASC 842 / IFRS 16)",
-      "body": "Under the old rules, companies could keep operating leases entirely off the balance sheet. Under current rules (ASC 842 in the US, IFRS 16 internationally), most leases must now be capitalized.\n\nOperating Lease (still the most common type):\n• Balance sheet: a Right-of-Use (ROU) asset and a lease liability appear.\n• Income statement: lease expense is one line item in operating expenses (like old operating lease treatment).\n• Cash flow: the payment is in CFO.\n\nFinance Lease (capital lease):\n• Balance sheet: same — ROU asset and lease liability.\n• Income statement: split into depreciation (in EBITDA calculation) and interest expense (below EBIT).\n• Cash flow: principal is in CFF, interest in CFO or CFF depending on policy.\n\nKey interview point: EBITDA is affected differently. For an operating lease, the lease expense is above EBITDA. For a finance lease, only the depreciation piece is above EBITDA; interest is below. This is why comparing EBITDA across companies can require adjustments for lease classification.\n\nOld vs. new: Prior to ASC 842, operating leases were fully off-balance-sheet. Now they show up — this inflates assets and liabilities but doesn't change underlying economics.",
+      "title": "Leases — the debt that used to be hidden",
+      "body": "Companies lease all kinds of things — office space, equipment, vehicles. For a long time, many of these leases were kept entirely off the balance sheet. That meant companies looked less indebted than they actually were.\n\nRegulators eventually changed the rules. Under the current rules (ASC 842 in the US, IFRS 16 globally), most leases must now appear on the balance sheet.\n\nHere's what that looks like:\n• The company records a Right-of-Use (ROU) asset: 'we have the right to use this space.'\n• And a lease liability: 'we owe future payments for this space.'\n\nThere are two types of leases:\n\nOperating Lease (most leases — office space, equipment rentals):\n• Balance sheet: ROU asset and lease liability (new under current rules)\n• Income statement: one lease expense line in operating expenses\n• Cash flow: the payment goes in CFO\n\nFinance Lease (like owning — typically high-value equipment you'll use most of its life):\n• Balance sheet: same ROU asset and lease liability\n• Income statement: split into depreciation (above EBITDA) and interest (below EBITDA)\n• Cash flow: principal repayment goes in CFF; interest in CFO\n\nThe key interview point: the lease type affects EBITDA. For an operating lease, the lease expense sits above EBITDA. For a finance lease, only depreciation sits above EBITDA, while interest is below. This can make the same company look more or less profitable depending on how leases are classified.",
       "keyPoints": [
-        "ASC 842/IFRS 16: most leases now on balance sheet as ROU asset + lease liability",
-        "Operating lease: single lease expense in OpEx; payment in CFO",
-        "Finance lease: depreciation in OpEx + interest below EBIT; principal in CFF",
-        "Operating lease expense is above EBITDA; finance lease interest is below",
-        "New rules changed optics of leverage ratios — same economics, different appearance"
+        "Old rules: operating leases were off-balance-sheet. New rules (ASC 842): most leases are on",
+        "Both types add ROU asset + lease liability to the balance sheet",
+        "Operating lease: single expense above EBITDA, in CFO",
+        "Finance lease: depreciation above EBITDA + interest below, principal in CFF",
+        "Lease classification affects EBITDA — matters for company comparisons"
       ]
     },
     {
-      "id": "goodwill-intangibles",
-      "title": "Goodwill, Intangibles, and Purchase Price Allocation",
-      "body": "When one company acquires another at a premium to book value, the acquirer must allocate the purchase price to the target's identifiable assets and liabilities at fair value. Anything left over is goodwill.\n\nPurchase Price Allocation (PPA):\n1. Identify and value target's assets at fair market value (often higher than book)\n2. Identify and value target's liabilities\n3. Net fair value of assets/liabilities = adjusted net assets\n4. Purchase price − adjusted net assets = goodwill\n\nGoodwill on the Balance Sheet:\n• Stays there until impaired (no amortization under GAAP)\n• Under IFRS, some intangibles with finite lives are amortized\n• If the business underperforms expectations, goodwill gets written down (impaired): non-cash charge on IS, reduces goodwill on BS\n\nIdentified Intangibles (not goodwill):\n• Customer relationships, patents, trademarks, technology\n• These have finite lives and are amortized — shows up as D&A, which hits EBIT\n• Added back in CFO (non-cash)\n\nGoodwill impairment:\n• Non-cash charge reduces IS income and BS goodwill\n• No tax effect (goodwill not deductible in most cases)\n• No cash flow impact",
+      "id": "goodwill",
+      "title": "Goodwill — what you paid for that you can't touch",
+      "body": "When one company buys another, it almost always pays more than the 'book value' of the target's assets. Why? Because a company is worth more than just its stuff. It has a brand, customer relationships, talented employees, patents — things that aren't fully captured on the balance sheet.\n\nThe premium is split into two pieces:\n1. Fair value adjustments to identifiable assets and liabilities (e.g. the target's equipment might be worth more than its book value)\n2. Whatever's left over after those adjustments = Goodwill\n\nGoodwill shows up as an asset on the acquirer's balance sheet. It represents 'we paid extra because we believed in this business.'\n\nHow goodwill behaves:\n• It's not amortized under US GAAP — it just sits on the balance sheet\n• Each year, the company tests whether it's still worth what they paid ('impairment test')\n• If the business underperforms, they write down goodwill — that's a non-cash charge that hits the income statement\n• No cash effect from goodwill impairment: the charge reduces income and reduces the goodwill asset, but no cash moves\n\nWhy it matters: M&A deals generate a lot of goodwill. After a big acquisition, a company's balance sheet can balloon with goodwill. If those acquisitions don't pan out, you'll see big impairment charges — which can be alarming on the income statement but don't affect cash flow.",
       "keyPoints": [
         "Goodwill = purchase price minus fair value of net assets acquired",
-        "Not amortized under GAAP — stays on BS until impaired",
-        "Impairment: non-cash charge on IS, reduces BS goodwill, no CFS impact",
-        "Identified intangibles (patents, customer lists) are amortized — non-cash, add back in CFO",
-        "PPA step-up in asset values creates D&A that reduces earnings post-acquisition"
+        "It represents intangible value: brand, customers, talent, know-how",
+        "Not amortized under US GAAP — stays on BS until impaired",
+        "Impairment: non-cash charge on IS, reduces goodwill on BS, no cash flow impact",
+        "Large goodwill balances signal big premium M&A — a red flag if deals don't deliver"
       ]
     },
     {
       "id": "depreciation-methods",
-      "title": "Depreciation Methods and PP&E",
-      "body": "Depreciation is the systematic allocation of the cost of a long-lived asset over its useful life. It's a non-cash expense — reduces income but not cash.\n\nStraight-Line Depreciation:\n• Annual depreciation = (Cost − Salvage Value) / Useful Life\n• Example: $100 asset, $0 salvage, 10-year life → $10/year\n• Most common for GAAP reporting\n\nAccelerated Depreciation (e.g. Double Declining Balance):\n• Higher depreciation in early years, lower later\n• Used for tax purposes (lowers taxes now, creates DTL)\n• DDB: 2 × (1/useful life) × book value each year\n\nPP&E Roll-Forward:\nBeginning PP&E + CapEx − Depreciation − Asset Sales = Ending PP&E\n\nAmortization vs. Depreciation:\n• Depreciation: tangible assets (equipment, buildings)\n• Amortization: intangible assets (patents, customer lists, capitalized software)\n• Both are non-cash; both added back in CFO\n• Together they form D&A on the income statement\n\nInterview tip: Know the PP&E roll-forward cold. If CapEx = $50 and depreciation = $30, PP&E net increases by $20. That $50 is in CFI as an outflow; the $30 is a non-cash add-back in CFO.",
+      "title": "Depreciation — spreading the cost of assets over time",
+      "body": "When you buy a piece of equipment, you don't expense the full cost on day one. You spread it out over the asset's useful life. That spreading is called depreciation.\n\nWhy not expense it immediately? Because the asset generates value over multiple years. Matching the cost to the revenue it generates over time is more accurate. (This is the matching principle in accounting.)\n\nThe most common method is straight-line:\nIf a $10,000 machine lasts 10 years with zero salvage value, you depreciate $1,000/year.\n\nThere's also accelerated depreciation (like Double Declining Balance): you write off more in early years, less later. This lowers your taxable income in the early years, which is why it's popular for tax purposes.\n\nAmortization is the same idea but for intangible assets (like patents, customer lists, software). Depreciation is for physical assets (PP&E); amortization is for intangibles. Together they're called D&A.\n\nBoth are non-cash — they reduce income but no cash leaves. So in the cash flow statement, you add them back to net income in CFO.\n\nPP&E Roll-Forward (how to track PP&E across periods):\nEnding PP&E = Beginning PP&E + CapEx − Depreciation − Asset Disposals\n\nThis formula is foundational for financial modeling. If you know three of the four variables, you can solve for the fourth.",
       "keyPoints": [
-        "Straight-line: equal charge each year; most common for GAAP",
-        "Accelerated: more depreciation early — reduces taxes now, creates DTL",
-        "PP&E roll-forward: beginning + CapEx − D&A − disposals = ending",
-        "Amortization: same concept for intangible assets",
-        "Both are non-cash — added back in CFO, reduce income on IS"
+        "Depreciation spreads a physical asset's cost over its useful life",
+        "Straight-line: equal amount every year. Accelerated: more in early years",
+        "Amortization: same concept for intangible assets (patents, software, customer lists)",
+        "D&A is non-cash — add back in CFO, reduces income on IS, lowers PP&E on BS",
+        "PP&E roll-forward: beginning + CapEx − D&A − disposals = ending"
       ]
     },
     {
-      "id": "equity-and-ratios",
-      "title": "Shareholders' Equity and Key Ratios",
-      "body": "Shareholders' equity is the residual interest in assets after liabilities. It changes each period:\n\nBeginning Equity\n+ Net Income\n− Dividends\n+ Stock Issuances (APIC)\n− Share Buybacks (Treasury Stock)\n+ SBC (non-cash, increases APIC)\n= Ending Equity\n\nKey Financial Ratios:\n\nLiquidity:\n• Current Ratio = Current Assets / Current Liabilities (>1 = can pay short-term obligations)\n• Quick Ratio = (Current Assets − Inventory) / Current Liabilities (stricter)\n\nProfitability:\n• Gross Margin = Gross Profit / Revenue\n• EBITDA Margin = EBITDA / Revenue\n• Net Margin = Net Income / Revenue\n• Return on Equity (ROE) = Net Income / Equity\n• Return on Assets (ROA) = Net Income / Assets\n\nLeverage:\n• Debt / EBITDA — key credit metric, how many years to pay off debt\n• Net Debt / EBITDA — same but subtracts cash from debt\n• Interest Coverage = EBITDA / Interest Expense\n\nWhy this matters: These ratios are used in credit analysis, M&A screening, and comp analysis. Interviewers may ask you to interpret them or compare two companies.",
+      "id": "ratios",
+      "title": "Key Financial Ratios — how to read a company's health",
+      "body": "Raw numbers in financial statements are hard to compare across companies of different sizes. Ratios normalize everything so you can make apple-to-apple comparisons.\n\nProfitability (is the company good at making money?):\n• Gross Margin = Gross Profit / Revenue → what % you keep after making the product\n• EBITDA Margin = EBITDA / Revenue → operating efficiency, ignoring capital structure\n• Net Margin = Net Income / Revenue → what % you keep after everything\n\nLiquidity (can the company pay its bills short-term?):\n• Current Ratio = Current Assets / Current Liabilities → above 1 means you can cover short-term obligations\n• Quick Ratio = (Current Assets − Inventory) / Current Liabilities → stricter; excludes inventory\n\nLeverage (how much debt does the company carry?):\n• Debt / EBITDA → how many years of cash flow it would take to pay off all debt. Under 3× is generally healthy for most industries.\n• Net Debt / EBITDA → same but subtracts cash from debt (because cash could offset debt)\n• Interest Coverage = EBITDA / Interest Expense → can the company afford its interest payments? Above 3× is generally comfortable.\n\nReturn metrics:\n• ROE = Net Income / Shareholders' Equity → how efficiently equity is generating profit\n• ROA = Net Income / Total Assets → how efficiently assets are generating profit\n\nYou don't need to memorize these formulas. Understand what each is measuring, and you'll be able to derive them when you need them.",
       "keyPoints": [
-        "Equity roll-forward: beginning + NI − dividends + issuances − buybacks = ending",
-        "Current ratio and quick ratio measure short-term liquidity",
-        "EBITDA margin and net margin measure profitability at different stages",
-        "Debt/EBITDA and interest coverage measure leverage and debt serviceability",
-        "ROE = NI/Equity; ROA = NI/Assets — return metrics"
+        "Gross margin, EBITDA margin, net margin measure profitability at different stages",
+        "Current ratio and quick ratio measure ability to pay short-term obligations",
+        "Debt/EBITDA measures leverage — how many years of cash flow to pay off debt",
+        "Interest coverage (EBITDA / interest) shows if the company can service its debt",
+        "ROE and ROA measure how efficiently equity and assets generate profit"
       ]
     }
   ]

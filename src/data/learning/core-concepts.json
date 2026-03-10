@@ -1,0 +1,75 @@
+{
+  "id": "core-concepts",
+  "slug": "core-concepts",
+  "title": "Core Concepts",
+  "description": "Start here. What companies are, what investment banks do, and why any of this matters — explained like you're new to all of it.",
+  "quizTopic": "core",
+  "order": 1,
+  "sections": [
+    {
+      "id": "what-is-a-company",
+      "title": "What is a company, really?",
+      "body": "A company is just a group of people organized to make money together.\n\nLet's say your friend starts selling custom phone cases. She buys plain cases for $3, spends $2 on paint and supplies, and sells each finished case for $15. She's running a business.\n\nOnce that business grows — she hires helpers, rents a studio, gets orders from hundreds of customers — it becomes hard to keep track of everything in her head. That's where finance comes in.\n\nFinance is the language companies use to track, measure, and communicate how they're doing. Investors, lenders, and executives all use the same financial reports to answer questions like: Is this company making money? Can it pay its bills? Is it worth investing in?\n\nWhen you work in investment banking, understanding this language is your baseline. Everything else you do — advising on deals, building models, valuing companies — starts here.",
+      "keyPoints": [
+        "A company makes money by selling a product or service for more than it costs to make",
+        "Finance is the language used to track and measure how a business is doing",
+        "Investment banking is built on understanding how companies work financially"
+      ]
+    },
+    {
+      "id": "what-is-ib",
+      "title": "What do investment banks actually do?",
+      "body": "Investment banks are specialized firms that help companies and governments do big financial things — things too large or complex to do alone.\n\nThink of an investment bank like a high-powered advisor and deal facilitator. Here are the main things they do:\n\nM&A (Mergers & Acquisitions): When one company wants to buy another, an investment bank advises them — helping figure out a fair price, structuring the deal, and making it happen. Example: when Disney bought Pixar, banks were involved.\n\nIPOs (Initial Public Offerings): When a private company wants to sell shares to the public for the first time (go public), investment banks help price and distribute those shares. Example: Airbnb, Uber, Robinhood all went public with bank help.\n\nDebt and Equity Financing: Companies often need to raise money — either by borrowing (issuing bonds) or selling ownership (issuing stock). Banks help structure, price, and sell those securities to investors.\n\nAs an investment banking analyst — the entry-level job — you spend most of your time building financial models and presentations (called 'pitch books') that support your bank's advice. It's a demanding job, but it's one of the most prestigious starting points in finance.",
+      "keyPoints": [
+        "Investment banks advise companies on major transactions: M&A, IPOs, and raising capital",
+        "Banks earn fees by facilitating these deals — often millions of dollars per transaction",
+        "An analyst builds models and presentations to support the senior bankers giving advice",
+        "M&A (buying/selling companies), ECM (equity), and DCM (debt) are the main business lines"
+      ]
+    },
+    {
+      "id": "what-is-revenue-profit",
+      "title": "Revenue vs. Profit — not the same thing",
+      "body": "This is one of the most important concepts in finance, and people get it wrong all the time.\n\nRevenue (also called 'sales' or the 'top line') is the total amount of money a company brings in from customers. If your phone case business sells 100 cases at $15 each, your revenue is $1,500.\n\nBut revenue doesn't mean you actually made $1,500. You still had costs:\n• Cases: $300 (100 × $3)\n• Supplies: $200 (100 × $2)\n• Total costs: $500\n\nProfit = Revenue − Costs = $1,500 − $500 = $1,000\n\nThat $1,000 is your profit. Revenue is the total you took in; profit is what's left after expenses.\n\nWhy does this matter? A company can have billions in revenue but still be losing money if its costs are higher. Investors care about profit (and especially future profit) — not just how much a company sells. Understanding the difference between the two is step one of reading any financial report.",
+      "keyPoints": [
+        "Revenue = total sales; Profit = revenue minus all costs",
+        "A company can have high revenue but still be unprofitable",
+        "Investors care about profit (and trajectory), not just revenue size",
+        "Net income is the final profit number after all costs, taxes, and interest"
+      ]
+    },
+    {
+      "id": "profit-vs-cash",
+      "title": "Profit vs. Cash — also not the same thing",
+      "body": "Here's something that surprises most people: making a profit doesn't mean you have cash.\n\nImagine your phone case business sells $1,000 worth of cases to a school on credit — meaning they'll pay you in 60 days. On paper, you made $1,000 in revenue. But your bank account doesn't change yet because you haven't collected the cash.\n\nMeanwhile, you still need to pay your supplier $500 now. So you're profitable on paper but cash-poor in practice. This is why businesses — even profitable ones — sometimes run into trouble: they run out of cash.\n\nThis difference is called the accrual vs. cash distinction:\n• Accrual accounting: record revenue when you earn it (when the sale happens), not when cash arrives\n• Cash accounting: only record when cash actually moves\n\nPublic companies use accrual accounting. That's why there are three separate financial statements — the income statement shows profit, but the cash flow statement shows actual cash. Both matter.\n\nIn banking, you need to understand cash flow as much as you understand profit, because companies that run out of cash go bankrupt — even profitable ones.",
+      "keyPoints": [
+        "Profit ≠ cash: you can earn revenue without having collected the money yet",
+        "Accrual accounting records revenue when earned, not when cash is received",
+        "The cash flow statement exists precisely because profit doesn't equal cash",
+        "Cash-poor companies can go bankrupt even if they're technically profitable"
+      ]
+    },
+    {
+      "id": "three-statements-intro",
+      "title": "The three financial statements — a quick map",
+      "body": "Every public company publishes three financial reports. They each answer a different question about the business.\n\n1. The Income Statement — 'Did we make money this period?'\nShows revenue, all the costs, and what's left (net income). Covers a period of time — like a quarter or a year. Think of it like a running score.\n\n2. The Balance Sheet — 'What do we own and owe right now?'\nA snapshot of everything the company owns (assets), everything it owes (liabilities), and what's left for the owners (equity). It's always at a single point in time — like a photo.\n\n3. The Cash Flow Statement — 'How did actual cash move?'\nShows where cash came from and where it went. Starts with net income and works backward to show real cash generated from the business, from investments, and from financing.\n\nThe three statements are linked. Net income from the income statement flows into both the cash flow statement (as a starting point) and the balance sheet (as retained earnings). The ending cash on the cash flow statement must match the cash on the balance sheet.\n\nYou'll spend a lot of time understanding each of these in detail. For now, just know what question each one answers — that context makes everything else easier to understand.",
+      "keyPoints": [
+        "Income statement: did we make money? (covers a time period)",
+        "Balance sheet: what do we own and owe? (a snapshot in time)",
+        "Cash flow statement: how did cash actually move? (covers a time period)",
+        "All three are connected — net income links them all together"
+      ]
+    },
+    {
+      "id": "why-it-matters-interviews",
+      "title": "Why does this matter for recruiting?",
+      "body": "When you interview for investment banking, hedge funds, private equity, or even consulting, you will be asked about financial statements — in almost every interview.\n\nThe classic opener is: 'Walk me through the three financial statements.' Interviewers ask this because understanding financials is the foundation of the job. If you can't read a balance sheet or explain how net income flows to retained earnings, you can't build a model — and building models is what analysts do all day.\n\nMore importantly, understanding financials gives you confidence in conversations. When your MD talks about a company's EBITDA margin shrinking or an acquisition being dilutive to earnings, you need to instantly know what that means.\n\nYou don't need to be an accountant. You don't need to have taken accounting in school. You just need to understand the concepts well enough to think through them out loud — and that's exactly what this app is designed to help you do.\n\nStart simple. Build up every day. By the time you interview, it'll feel like second nature.",
+      "keyPoints": [
+        "'Walk me through the three financial statements' is one of the most common IB interview questions",
+        "Analysts build financial models daily — knowing the statements is the foundation",
+        "You don't need an accounting background; you need to understand the concepts and their logic",
+        "Consistent daily practice is how you build this fluency — not cramming the night before"
+      ]
+    }
+  ]
+}

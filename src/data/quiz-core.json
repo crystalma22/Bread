@@ -1,0 +1,211 @@
+[
+  {
+    "id": "core-mc-1",
+    "format": "multiple_choice",
+    "topic": "core",
+    "concept": "Investment banks advise companies on major transactions like M&A, IPOs, and raising capital.",
+    "question": "What is the main job of an investment bank?",
+    "options": [
+      { "id": "a", "label": "Give out loans to individuals" },
+      { "id": "b", "label": "Advise companies on big deals like acquisitions and IPOs" },
+      { "id": "c", "label": "Manage retirement savings for customers" },
+      { "id": "d", "label": "Sell insurance products" }
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "id": "core-mc-2",
+    "format": "multiple_choice",
+    "topic": "core",
+    "concept": "Revenue is total sales. Profit is what's left after all costs are subtracted.",
+    "question": "A phone case business sells 100 cases at $15 each. Its total costs are $500. What is the profit?",
+    "options": [
+      { "id": "a", "label": "$500" },
+      { "id": "b", "label": "$1,500" },
+      { "id": "c", "label": "$1,000" },
+      { "id": "d", "label": "$2,000" }
+    ],
+    "correctAnswer": "c"
+  },
+  {
+    "id": "core-mc-3",
+    "format": "multiple_choice",
+    "topic": "core",
+    "concept": "The income statement covers a period of time. The balance sheet is a snapshot at a single point in time.",
+    "question": "Which financial statement is a snapshot at a single point in time?",
+    "options": [
+      { "id": "a", "label": "Income statement" },
+      { "id": "b", "label": "Cash flow statement" },
+      { "id": "c", "label": "Balance sheet" },
+      { "id": "d", "label": "All three" }
+    ],
+    "correctAnswer": "c"
+  },
+  {
+    "id": "core-mc-4",
+    "format": "multiple_choice",
+    "topic": "core",
+    "concept": "An IPO (Initial Public Offering) is when a private company sells shares to the public for the first time.",
+    "question": "What does IPO stand for?",
+    "options": [
+      { "id": "a", "label": "Investment Portfolio Offering" },
+      { "id": "b", "label": "Initial Public Offering" },
+      { "id": "c", "label": "Internal Price Optimization" },
+      { "id": "d", "label": "Interest Payment Obligation" }
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "id": "core-mc-5",
+    "format": "multiple_choice",
+    "topic": "core",
+    "concept": "The cash flow statement shows how actual cash moved in and out of the business.",
+    "question": "Which statement answers the question: 'How did actual cash move this period?'",
+    "options": [
+      { "id": "a", "label": "The balance sheet" },
+      { "id": "b", "label": "The income statement" },
+      { "id": "c", "label": "The cash flow statement" },
+      { "id": "d", "label": "The shareholder letter" }
+    ],
+    "correctAnswer": "c"
+  },
+  {
+    "id": "core-mc-6",
+    "format": "multiple_choice",
+    "topic": "core",
+    "concept": "M&A stands for Mergers & Acquisitions — when companies buy or merge with other companies.",
+    "question": "What does M&A stand for in investment banking?",
+    "options": [
+      { "id": "a", "label": "Markets & Analysis" },
+      { "id": "b", "label": "Mergers & Acquisitions" },
+      { "id": "c", "label": "Management & Accounting" },
+      { "id": "d", "label": "Money & Assets" }
+    ],
+    "correctAnswer": "b"
+  },
+  {
+    "id": "core-tf-1",
+    "format": "true_false",
+    "topic": "core",
+    "concept": "Profit and cash are not the same — you can record a profit without having received cash yet.",
+    "question": "If a company makes a profit, it always has cash in the bank equal to that profit.",
+    "correctAnswer": "false"
+  },
+  {
+    "id": "core-tf-2",
+    "format": "true_false",
+    "topic": "core",
+    "concept": "Revenue is the total money a business takes in from sales.",
+    "question": "Revenue is the same thing as profit.",
+    "correctAnswer": "false"
+  },
+  {
+    "id": "core-tf-3",
+    "format": "true_false",
+    "topic": "core",
+    "concept": "Investment banks earn fees for facilitating large financial transactions.",
+    "question": "Investment banks primarily make money by charging fees to companies for their advisory services.",
+    "correctAnswer": "true"
+  },
+  {
+    "id": "core-tf-4",
+    "format": "true_false",
+    "topic": "core",
+    "question": "An analyst at an investment bank is an entry-level position.",
+    "correctAnswer": "true"
+  },
+  {
+    "id": "core-tf-5",
+    "format": "true_false",
+    "topic": "core",
+    "concept": "Accrual accounting records revenue when it is earned, not when cash is collected.",
+    "question": "Under accrual accounting, revenue is only recorded when cash is received.",
+    "correctAnswer": "false"
+  },
+  {
+    "id": "core-fill-1",
+    "format": "fill_blank",
+    "topic": "core",
+    "concept": "Profit = Revenue minus Costs.",
+    "question": "Profit = Revenue − ___",
+    "correctAnswer": "Costs",
+    "acceptableAnswers": ["costs", "expenses", "cost", "total costs"]
+  },
+  {
+    "id": "core-fill-2",
+    "format": "fill_blank",
+    "topic": "core",
+    "concept": "The three financial statements are the income statement, balance sheet, and cash flow statement.",
+    "question": "The three financial statements are: the ___ statement, the balance sheet, and the cash flow statement.",
+    "correctAnswer": "income",
+    "acceptableAnswers": ["income", "profit and loss", "P&L"]
+  },
+  {
+    "id": "core-match-1",
+    "format": "matching",
+    "topic": "core",
+    "question": "Match each financial statement to the question it answers:",
+    "pairs": [
+      { "left": "Income statement", "right": "Did we make money this period?" },
+      { "left": "Balance sheet", "right": "What do we own and owe right now?" },
+      { "left": "Cash flow statement", "right": "How did actual cash move?" }
+    ]
+  },
+  {
+    "id": "core-match-2",
+    "format": "matching",
+    "topic": "core",
+    "question": "Match each IB term to its definition:",
+    "pairs": [
+      { "left": "M&A", "right": "Buying or merging with another company" },
+      { "left": "IPO", "right": "Going public for the first time" },
+      { "left": "Revenue", "right": "Total money taken in from sales" },
+      { "left": "Profit", "right": "What's left after subtracting all costs" }
+    ]
+  },
+  {
+    "id": "core-order-1",
+    "format": "ordering",
+    "topic": "core",
+    "concept": "Revenue is the starting point. After subtracting costs, you get profit.",
+    "question": "Put these in order from largest to smallest (before we subtract costs):",
+    "items": [
+      "Revenue (top line)",
+      "Gross Profit",
+      "Net Income (bottom line)"
+    ]
+  },
+  {
+    "id": "core-select-1",
+    "format": "multiple_select",
+    "topic": "core",
+    "concept": "Investment banks work on M&A, IPOs, and capital raising (debt and equity).",
+    "question": "Which of the following are things investment banks help with? Select all that apply.",
+    "options": [
+      { "id": "a", "label": "Helping a company get acquired" },
+      { "id": "b", "label": "Taking a company public (IPO)" },
+      { "id": "c", "label": "Managing individual checking accounts" },
+      { "id": "d", "label": "Raising money by issuing bonds or stock" },
+      { "id": "e", "label": "Processing small business payroll" }
+    ],
+    "correctAnswers": ["a", "b", "d"]
+  },
+  {
+    "id": "core-flash-1",
+    "format": "flash_q",
+    "topic": "core",
+    "concept": "The most common opening question in IB interviews. Interviewers want to see that you understand all three statements and how they connect.",
+    "question": "Walk me through the three financial statements.",
+    "correctAnswer": "The income statement shows revenue minus expenses to arrive at net income — it measures profitability over a period. The balance sheet shows what a company owns (assets) and owes (liabilities), with the difference being equity — it's a snapshot in time. The cash flow statement shows actual cash movement: starting with net income, adjusting for non-cash items, and showing cash from operations, investing, and financing. Net income links all three: it flows to retained earnings on the balance sheet and is the starting point of the cash flow statement.",
+    "options": []
+  },
+  {
+    "id": "core-flash-2",
+    "format": "flash_q",
+    "topic": "core",
+    "concept": "Profit is an accounting concept. Cash is real money. They differ because of timing: revenue can be earned before cash arrives, and expenses can be recorded before they're paid.",
+    "question": "Why can a profitable company still run out of cash?",
+    "correctAnswer": "Profit is an accounting measure — revenue is recorded when earned, not when cash is received. A company could show a profit while waiting 60-90 days to collect from customers (accounts receivable). Meanwhile, it still has to pay suppliers and employees. That's why companies can be profitable and cash-poor at the same time. Cash flow is a separate, equally important metric.",
+    "options": []
+  }
+]

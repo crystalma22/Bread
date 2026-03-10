@@ -3,6 +3,7 @@ import quizTopicsData from '@/data/quiz-topics.json'
 
 // Static file map — add new topic files here as content grows
 import quizAccounting from '@/data/quiz-accounting.json'
+import quizCore from '@/data/quiz-core.json'
 
 export interface QuizTopic {
   id: string
@@ -14,6 +15,7 @@ export interface QuizTopic {
 
 const QUESTION_FILES: Record<string, QuizQuestion[]> = {
   'quiz-accounting.json': quizAccounting as QuizQuestion[],
+  'quiz-core.json': quizCore as QuizQuestion[],
 }
 
 export const ALL_TOPICS: QuizTopic[] = (quizTopicsData as { topics: QuizTopic[] }).topics
