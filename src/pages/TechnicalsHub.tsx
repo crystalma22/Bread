@@ -29,19 +29,19 @@ export function TechnicalsHub() {
       {!recallDoneToday && hasLearnedSomething && (
         <Link to="/recall" style={styles.recallCard}>
           <span style={styles.recallLabel}>Daily recall</span>
-          <p style={styles.recallText}>Keep your streak — a few quick questions from what you’ve learned.</p>
+          <p style={styles.recallText}>Keep your streak — a few quick questions from what you have learned.</p>
         </Link>
       )}
 
       <section style={styles.section}>
         <h2 style={styles.sectionTitle}>Roadmap</h2>
-        <div style={styles.roadmap}> “why it matters,”        <div style={styles.roadmap}>
+        <div style={styles.roadmap}>
           {modules.map((m, i) => {
-            const isUnlocked = i === 0 || (i > 0 && hasLearnedSomething);
-            const Comp = isUnlocked ? Link : 'div';
-            const linkProps = isUnlocked ? { to: `/technicals/${m.slug}` as const } : {};
-            const quizTopic = (m as LearningModule & { quizTopic?: string }).quizTopic;
-            const hasDrill = isUnlocked && quizTopic != null && PLAYABLE_TOPIC_IDS.has(quizTopic);
+            const isUnlocked = i === 0 || (i > 0 && hasLearnedSomething)
+            const Comp = isUnlocked ? Link : 'div'
+            const linkProps = isUnlocked ? { to: `/technicals/${m.slug}` as const } : {}
+            const quizTopic = (m as LearningModule & { quizTopic?: string }).quizTopic
+            const hasDrill = isUnlocked && quizTopic != null && PLAYABLE_TOPIC_IDS.has(quizTopic)
             return (
               <div key={m.id} style={styles.roadmapRow}>
                 {i > 0 && <div style={styles.connector} />}
@@ -63,7 +63,7 @@ export function TechnicalsHub() {
                   )}
                 </div>
               </div>
-            );
+            )
           })}
         </div>
       </section>
